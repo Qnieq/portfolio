@@ -1,0 +1,16 @@
+@mixin flex ($align_items, $justify_content) {
+    display: flex;
+    align-items: $align_items;
+    justify-content: $justify_content;
+}
+
+@mixin width() {
+    width: clamp(320px, 90vw, 1760px);
+}
+
+@mixin text ($align, $min, $vw, $max, $color, $weight) {
+    text-align: $align;
+    font-size: clamp($min, $vw, $max);
+    color: $color;
+    font-weight: $weight;
+}

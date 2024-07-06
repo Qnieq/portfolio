@@ -1,0 +1,108 @@
+@import "@/app/mixins";
+
+.hero_section {
+    width: 100%;
+    min-height: 100dvh;
+    height: 100%;
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 70px;
+
+    .title_container {
+        @include width;
+        @include flex(flex-start, center);
+        flex-direction: column;
+
+        .title {
+            @include text(left, 42px, 7vw, 137px, var(--title), 800);
+        }
+
+        .description_box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: flex-end;
+            align-items: flex-end;
+            gap: clamp(30px, 5vw, 80px);
+            position: relative;
+
+            .desc {
+                // width: clamp(270px, 25vw, 700px);
+                @include text(left, 14px, 2vw, 16px, var(--desc), 500);
+
+            }
+
+            .contact {
+                @include flex(center, center);
+                gap: 10px;
+                @include text(left, 14px, 2vw, 16px, var(--title), 600);
+                text-decoration: none;
+                border-bottom: 2px solid var(--title);
+            }
+        }
+    }
+
+    .content {
+        width: 100%;
+        @include flex(center, flex-start);
+        position: relative;
+
+        .bg_element {
+            width: 86%;
+            height: 600px;
+            background: var(--title);
+            border-radius: 0 300px 300px 0;
+            @include flex(flex-end, center);
+            overflow: hidden;
+            position: relative;
+
+            .photo {
+                width: 450px;
+                height: 560px;
+                z-index: 9;
+                filter: brightness(0.8);
+            }
+
+            .squares_box {
+                position: absolute;
+                display: grid;
+                grid-template-columns: repeat(40, 50px);
+                column-gap: 30px;
+
+                .square {
+                    width: 80px;
+                    height: 80px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+        .poster {
+            position: absolute;
+
+            &:nth-child(2) {    
+                top: 0;
+                right: 30%;
+                rotate: 10deg;
+            }
+            &:nth-child(3) {    
+                top: 50%;
+                right: 30%;
+                rotate: -20deg;
+            }
+            &:nth-child(4) {
+                width: 180px !important;
+                height: 180px !important; 
+                top: -5%;
+                right: 70%;
+                rotate: -5deg;
+            }
+            &:nth-child(5) {
+                width: 300px !important;
+                height: 300px !important; 
+                top: 50%;
+                right: 70%;
+                rotate: 15deg;
+            }
+        }
+    }
+}

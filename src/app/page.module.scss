@@ -1,0 +1,7 @@
+@import "@/app/mixins";
+
+.main {
+  @include flex(center, center);
+  min-height: 100vh;
+  height: 100%;
+}
