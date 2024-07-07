@@ -1,11 +1,11 @@
 @import "@/app/mixins";
 
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     background: var(--header);
     width: 100%;
-    padding: 30px 0;
+    padding: clamp(15px, 5vw, 30px) 0;
     @include flex(center, center);
 
     .header_box {
@@ -40,6 +40,37 @@
                 text-decoration: none;
             }
         }
+
+        .mobile_nav {
+            @include flex(center, center);
+            position: absolute;
+            top: 75px;
+            right: 5%;
+            background: var(--title);
+            border-radius: 10px;
+
+            .nav_block {
+                @include flex(center, center);
+                width: 100%;
+                padding: 20px;
+
+                .link {
+                    @include text(left, 12px, 3vw, 15px, var(--header), 600);
+                    text-decoration: none;
+                    cursor: pointer;
+
+                }
+            }
+        }
     }
 
+}
+
+@media (max-width: 840px) {
+    .header {
+
+        .navigation {
+            display: none !important;
+        }
+    }
 }
