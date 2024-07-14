@@ -47,7 +47,7 @@ const HeroSection = () => {
                             ease: "linear",
                             duration: 1.4,
                             type: "spring",
-                            bounce: 0.05
+                            bounce: 0.3
                         }}
                         className={styles.title}
                     >
@@ -148,7 +148,7 @@ const HeroSection = () => {
                     }}
                     animate={{
                         left: "50%",
-                        rotate: 0
+                        rotate: 0,
                     }}
                     transition={{
                         delay: 3.3,
@@ -157,6 +157,7 @@ const HeroSection = () => {
                         type: "spring",
                         bounce: 0.05
                     }}
+                    
                     className={styles.poster_box}
                 >
                     <Image width={300} height={350} src={"/images/posters/young-dev.svg"} alt="" className={styles.poster} />

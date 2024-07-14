@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 const navigation: { link: string, title: string }[] = [
     {
         link: "#",
-        title: "Work"
+        title: "Works"
     },
     {
         link: "#",

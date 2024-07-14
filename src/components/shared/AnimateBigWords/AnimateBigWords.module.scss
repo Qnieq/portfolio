@@ -1,0 +1,12 @@
+@import "@/app/mixins";
+
+.words_section {
+    width: 100%;
+
+    .title {
+        width: 100%;
+        @include text(center, 5em, 25vw, 35em, var(--title), 900);
+        white-space: nowrap;
+        rotate: -5deg;
+    }
+}
