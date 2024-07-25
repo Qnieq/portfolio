@@ -1,0 +1,12 @@
+.bg_effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 400%;
+    inset: -200%;
+    background: url("/images/bg/bg_effect.jpg");
+    opacity: 0.08;
+    z-index: 9;
+    pointer-events: none;
+}
