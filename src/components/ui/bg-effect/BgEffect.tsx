@@ -8,7 +8,7 @@ const BgEffect = () => {
     let randomNumber = Math.floor(Math.random() * (30 - (-20) + 1)) + (-20);
     setInterval(function () {
       randomNumber = Math.floor(Math.random() * (30 - (-20) + 1)) + (-20);
-    }, 10);
+    }, 5);
     return (
         <motion.div
             animate={{

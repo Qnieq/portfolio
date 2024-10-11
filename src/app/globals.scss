@@ -17,3 +17,21 @@
 body {
   background: var(--main-bg);
 }
+
+/* Стили для кастомного скролла */
+::-webkit-scrollbar {
+  width: 5px; /* Ширина скролла */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main-bg); /* Цвет фона скролла */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333; /* Цвет ползунка скролла */
+  border-radius: 6px; /* Закругление углов ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет ползунка при наведении */
+}

@@ -1,4 +1,5 @@
 "use client"
+
 import Link from "next/link";
 import styles from "./Header.module.scss"
 import { useEffect, useState } from "react";
@@ -7,7 +8,7 @@ import { motion } from "framer-motion"
 
 const navigation: { link: string, title: string }[] = [
     {
-        link: "#",
+        link: "/works",
         title: "Works"
     },
     {
@@ -60,6 +61,7 @@ const Header = () => {
                     <h5 className={styles.name_tag}>
                         Michael<br />Orlov
                     </h5>
+                    <Link href={"/"} className={styles.logo_link} />
                 </div>
                 <nav className={styles.navigation}>
                     {navigation.map((nav, index) => (

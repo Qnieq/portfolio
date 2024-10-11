@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.scss";
+import Header from "@/components/shared/Header/Header";
+import BgEffect from "@/components/ui/bg-effect/BgEffect";
 
 const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] });
 
@@ -18,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserrat.className}>
-          {children}
+        <BgEffect />
+        <Header />
+        {children}
       </body>
     </html>
   );

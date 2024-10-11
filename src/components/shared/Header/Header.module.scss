@@ -18,6 +18,7 @@
             gap: 20px;
             height: 38px;
             cursor: pointer;
+            position: relative;
 
             .elem {
                 width: 80px;
@@ -28,6 +29,12 @@
 
             .name_tag {
                 @include text(left, 14px, 3vw, 18px, var(--title), 700);
+            }
+
+            .logo_link::after {
+                content: '';
+                position: absolute;
+                inset: 0
             }
         }
 

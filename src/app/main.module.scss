@@ -1,5 +1,13 @@
 @import "@/app/mixins";
 
+.main {
+    @include flex(center, center);
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+}
+
 .hero_section {
     width: 100%;
     min-height: 90dvh;
@@ -14,7 +22,7 @@
         flex-direction: column;
 
         .title {
-            @include text(left, 42px, 7vw, 137px, var(--title), 800);
+            @include text(left, 42px, 6vw, 135px, var(--title), 800);
         }
 
         .description_box {
@@ -80,6 +88,7 @@
         .poster_box {
             position: absolute;
             cursor: pointer;
+            z-index: 9;
 
             &:nth-child(2) {
                 top: 10%;
@@ -157,5 +166,124 @@
             display: none;
         }
 
+    }
+}
+
+.work {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .title {
+        width: 100%;
+        height: clamp(400px, 50vw, 900px);
+        @include flex(center, center);
+    }
+
+    .works_container {
+        @include flex(center, center);
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        // padding: 100px 0;
+        // background: var(--works-bg);    
+        border-radius: 150px 150px 0 0;
+        // gap: 40px;
+
+
+
+        .work_box {
+            @include flex(center, space-between);
+            @include width();
+            height: 100px;
+            border-top: var(--works-border) 2px solid;
+            cursor: pointer;
+            transition: .3s ease-in;
+            position: relative;
+
+
+            .work_title_box {
+                @include flex(center, center);
+                gap: 10px;
+                padding-left: 20px;
+
+                .work_title_company {
+                    @include text(center, 30px, 5vw, 60px, #eee5e0, 100);
+                    transition: .3s ease-in;
+
+                }
+
+                .work_title_project {
+                    @include text(center, 30px, 5vw, 60px, #eee5e0, 800);
+                    transition: .3s ease-in;
+
+                }
+            }
+
+            .work_preview {
+                position: absolute;
+                bottom: 50%;
+                right: 1px;
+                border: #eee5e0 2px solid;
+                border-radius: 20px;
+
+                .preview {
+                    border-radius: 20px;
+                }
+            }
+
+            .work_preview_active {
+                animation: activePreview 0.3s;
+            }
+
+            .work_preview_disable {
+                display: none;
+            }
+
+            @keyframes activePreview {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .work_link::after {
+                content: '';
+                position: absolute;
+                inset: 0
+            }
+
+            svg {
+                width: 95px;
+                height: 95px;
+
+                path {
+                    stroke: var(--icon-link);
+                    stroke-width: 0.5px;
+                    transition: .3s ease-in;
+
+                }
+            }
+
+
+            &:hover {
+                background: var(--bg-work-hover);
+
+                .work_title_company {
+                    color: var(--elements-hover);
+                }
+
+                .work_title_project {
+                    color: var(--elements-hover);
+                }
+
+                svg>path {
+                    stroke: var(--elements-hover);
+                }
+            }
+        }
     }
 }
