@@ -1,0 +1,116 @@
+@import "@/app/mixins";
+
+.container {
+    @include flex(center, center);
+    width: 100%;
+    height: 100%;
+
+    .item {
+        @include flex(flex-start, center);
+        @include width;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        gap: 150px;
+        background: var(--experience-bg);
+        padding: 70px 30px;
+        border-radius: 50px;
+
+
+        .item_box {
+            @include flex(flex-start, flex-end);
+            width: 100%;
+
+            .item_title {
+                display: flex;
+                flex-direction: column;
+                position: sticky;
+                top: 40%;
+                margin: 0;
+                padding: 0;
+
+                .title {
+                    @include text(left, 50px, 5vw, 100px, #fff, 600);
+                    color: #fff;
+                    transform: translate(100px);
+                }
+
+                .type {
+                    @include text(left, 18px, 5vw, 35px, #fff, 500);
+                    color: #fff;
+                    transform: translate(100px);
+                }
+            }
+
+            .item_type {
+                display: flex;
+                position: sticky;
+                top: 40%;
+                margin: 0;
+                padding: 0;
+            }
+
+
+            .content {
+                @include flex(flex-end, flex-end);
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                gap: 100px;
+
+                .item_description_box {
+                    @include flex(flex-start, center);
+                    flex-direction: column;
+                    width: 500px;
+                    height: 600px;
+                    gap: 40px;
+
+                    .info_box {
+                        @include flex(center, center);
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 10px;
+
+                        .info {
+                            width: 100%;
+                            @include text(left, 20px, 5vw, 35px, var(--title), 600);
+                        }
+
+                        .description {
+                            width: 100%;
+                            @include text(left, 14px, 5vw, 18px, var(--desc), 600);
+                        }
+                    }
+                }
+            }
+        }
+
+        .item_box_reverse {
+            flex-direction: row-reverse;
+
+            .item_title {
+                .title {
+                    text-align: right;
+                    transform: translate(-100px);
+                }
+
+                .type {
+                    text-align: right;
+                    transform: translate(-100px);
+                }
+            }
+
+            .content {
+                align-items: flex-start;
+
+                .item_description_box>.info_box>.info {
+                    text-align: right;
+                }
+
+                .item_description_box>.info_box>.description {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@import "@/app/mixins";
+
+.heading {
+    @include text(center, 50px, 5vw, 100px, var(--title), 700)
+}

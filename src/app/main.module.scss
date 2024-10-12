@@ -5,7 +5,6 @@
     flex-direction: column;
     min-height: 100vh;
     height: 100%;
-    overflow: hidden;
 }
 
 .hero_section {
@@ -184,13 +183,8 @@
         @include flex(center, center);
         flex-direction: column;
         width: 100%;
-        height: 100%;
-        // padding: 100px 0;
-        // background: var(--works-bg);    
+        height: 100%;  
         border-radius: 150px 150px 0 0;
-        // gap: 40px;
-
-
 
         .work_box {
             @include flex(center, space-between);
@@ -286,4 +280,13 @@
             }
         }
     }
+}
+
+.experience {
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 180px;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
 }
