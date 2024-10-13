@@ -9,7 +9,7 @@
 
 .hero_section {
     width: 100%;
-    min-height: 90dvh;
+    min-height: 100dvh;
     height: 100%;
     @include flex(center, center);
     flex-direction: column;
@@ -28,7 +28,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             justify-items: flex-end;
-            align-items: flex-end;
+            align-items: flex-start;
             gap: clamp(30px, 5vw, 80px);
             position: relative;
             overflow: hidden;
@@ -183,7 +183,7 @@
         @include flex(center, center);
         flex-direction: column;
         width: 100%;
-        height: 100%;  
+        height: 100%;
         border-radius: 150px 150px 0 0;
 
         .work_box {
@@ -288,5 +288,46 @@
     gap: 180px;
     height: 100%;
     width: 100%;
+    padding: 100px 0;
+
+    .parallax_box {
+        position: sticky;
+        top: 40%;
+    }
+}
+
+.about {
+    @include flex(center, center);
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
     padding: 50px 0;
+    background: var(--about-bg);
+    border-radius: 40px;
+}
+
+.contacts {
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 300px;
+    padding: 100px 0;
+
+    .box {
+        @include flex(center, center);
+        height: 50px;
+        padding: 40px;
+        border-radius: 30px;
+        background: #eee5e0;
+        gap: 20px;
+
+        .link {
+            @include flex(center, center);
+            text-decoration: none !important;
+            border: 2px solid #0a0a0a;
+            border-radius: 50%;
+            padding: 8px;
+        }
+    }
 }

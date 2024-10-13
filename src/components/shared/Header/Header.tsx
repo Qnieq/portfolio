@@ -7,18 +7,22 @@ import Image from "next/image";
 import { motion } from "framer-motion"
 
 const navigation: { link: string, title: string }[] = [
-    {
-        link: "/works",
-        title: "Works"
-    },
-    {
-        link: "#",
-        title: "About"
-    },
-    {
-        link: "#",
-        title: "Contact"
-    },
+    // {
+    //     link: "#works",
+    //     title: "Works"
+    // },
+    // {
+    //     link: "#experience",
+    //     title: "Experience"
+    // },
+    // {
+    //     link: "#about",
+    //     title: "About"
+    // },
+    // {
+    //     link: "#contact",
+    //     title: "Contact"
+    // },
 ];
 
 const Header = () => {

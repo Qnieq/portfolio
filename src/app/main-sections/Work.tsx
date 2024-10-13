@@ -1,5 +1,5 @@
 import AnimateBigWords from "@/components/shared/animate-big-words/AnimateBigWords";
-import styles from "./main.module.scss"
+import styles from "@/app/main.module.scss"
 import Image from "next/image";
 import { useState } from "react";
 import cn from "clsx"
@@ -32,7 +32,7 @@ const Work = () => {
                             </h2>
                         </div>
 
-                        <Link href={`/works/${work.title}`} className={styles.work_link} />
+                        <Link href={work.url} className={styles.work_link} />
 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.3159 17L16.3159 5.83201L4.99997 5.83204" stroke="#0A0A0A" />

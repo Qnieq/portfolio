@@ -1,7 +1,8 @@
 import { TrackWordPositionItem } from "@/components/ui/track-element-position/TrackWordPositionItem";
-import styles from "./main.module.scss"
+import styles from "@/app/main.module.scss"
 import Spline from '@splinetool/react-spline';
 import { Heading } from "@/components/ui/heading/Heading";
+import { ParallaxText } from "@/components/ui/parallax-text/ParallaxText";
 
 const experience = [
     {
@@ -80,7 +81,7 @@ const experience = [
                     },
                     {
                         title: "Express.js",
-                        description: "Использовал всего на одном проекте, потом узнал что есть Nest :))", 
+                        description: "Использовал всего на одном проекте, потом узнал что есть Nest :))",
                         icon: <Spline scene="https://prod.spline.design/Z2WITm6nBHIxC866/scene.splinecode" />
                     },
                 ]
@@ -149,7 +150,12 @@ const experience = [
 export function Experience() {
     return (
         <div className={styles.experience}>
-            <Heading title="My experience" />
+            <div className={styles.parallax_box}>
+                <ParallaxText baseVelocity={-0.5}>my experience my experience</ParallaxText>
+                <ParallaxText baseVelocity={0.8}>fullstack developer fullstack developer</ParallaxText>
+                <ParallaxText baseVelocity={-0.5}>fullstack developer fullstack developer</ParallaxText>
+                <ParallaxText baseVelocity={1.5}>my experience my experience</ParallaxText>
+            </div>
             {experience.map((item, index) => (
                 <TrackWordPositionItem {...item} key={index} />
             ))}

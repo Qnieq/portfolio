@@ -1,0 +1,23 @@
+@import "@/app/mixins";
+
+.paragraph {
+    display: flex;
+    font-size: clamp(32px, 5vw, 50px);
+    text-align: center;
+    line-height: 1;
+    padding: 40px;
+    @include width();
+    color: var(--desc-black);
+    flex-wrap: wrap;
+
+    .word {
+        position: relative;
+        margin-right: 12px;
+        margin-top: 12px;
+
+        .shadow {
+            position: absolute;
+            opacity: 20%;
+        }
+    }
+}

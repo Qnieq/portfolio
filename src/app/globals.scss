@@ -7,7 +7,9 @@
   --main-bg: #0a0a0a;
   --header: #0a0a0a;
   --experience-bg: #161616;
+  --about-bg: #eee5e0;
   --title: #eee5e0;
+  --desc-black: #0a0a0a;
   --desc: rgba(238, 229, 224, 0.726);
   --works-border: #eee5e0;
   --icon-link: #eee5e0;
@@ -17,22 +19,28 @@
 
 body {
   background: var(--main-bg);
+  overflow-x: hidden;
 }
 
 /* Стили для кастомного скролла */
 ::-webkit-scrollbar {
-  width: 5px; /* Ширина скролла */
+  width: 5px;
+  /* Ширина скролла */
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--main-bg); /* Цвет фона скролла */
+  background: var(--main-bg);
+  /* Цвет фона скролла */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333; /* Цвет ползунка скролла */
-  border-radius: 6px; /* Закругление углов ползунка */
+  background: #333333;
+  /* Цвет ползунка скролла */
+  border-radius: 6px;
+  /* Закругление углов ползунка */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Цвет ползунка при наведении */
+  background: #555;
+  /* Цвет ползунка при наведении */
 }

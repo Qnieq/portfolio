@@ -1,20 +1,22 @@
 'use client'
 
 import { SmoothScrolling } from "@/components/shared/smooth-scrolling/SmoothScrolling";
-import { Experience } from "./Experience";
-import HeroSection from "./HeroSection";
-import Work from "./Work";
-import { WorkHistory } from "./WorkHistory";
+import { Experience } from "./main-sections/Experience";
+import HeroSection from "./main-sections/HeroSection";
 import styles from "./main.module.scss"
+import Work from "./main-sections/Work";
+import { About } from "./main-sections/About";
+import { Contacts } from "./main-sections/Contacts";
 
 export function Main() {
     return (
         <SmoothScrolling>
             <div className={styles.main}>
                 <HeroSection />
+                <About />
                 <Experience />
-                <WorkHistory />
                 <Work />
+                <Contacts />
             </div>
         </SmoothScrolling>
     );

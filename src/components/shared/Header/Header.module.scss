@@ -1,7 +1,7 @@
 @import "@/app/mixins";
 
 .header {
-    position: relative;
+    position: absolute;
     top: 0;
     background: var(--header);
     width: 100%;

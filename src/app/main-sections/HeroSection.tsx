@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion"
-import styles from "./main.module.scss"
+import styles from "@/app/main.module.scss"
 import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
 
 const description = [
     {
-        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quo sapiente facilis laudantium ea illo voluptatum fugit sed ipsum. Rerum, dolores sequi?",
+        text: 'Я fullstack разработчик, специализирующийся на создании масштабируемых и надежных решений.',
         delay: 1.5
     },
     {
-        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos sed illum alias error dolores culpa hic tempore nobis explicabo?",
+        text: 'Моя цель — помогать бизнесам расти за счет инновационных и эффективных веб-решений.',
         delay: 2
     },
 ]
@@ -80,7 +80,7 @@ const HeroSection = () => {
                             {desc.text}
                         </motion.p>
                     ))}
-                    <motion.a
+                    {/* <motion.a
                         initial={{
                             translateY: 100,
                         }}
@@ -94,12 +94,12 @@ const HeroSection = () => {
                             type: "spring",
                             bounce: 0.05
                         }}
-                        href="#"
+                        href=""
                         className={styles.contact}
                     >
                         СВЯЗАТЬСЯ
                         <Image width={20} height={20} src={"/icons/arrow-right.svg"} alt="arrow" />
-                    </motion.a>
+                    </motion.a> */}
                 </div>
             </div>
 
