@@ -1,0 +1,18 @@
+@import "@/app/mixins";
+
+.box {
+    @include flex(center, center);
+    height: 50px;
+    padding: 40px;
+    border-radius: 30px;
+    background: #eee5e0;
+    gap: 20px;
+
+    .link {
+        @include flex(center, center);
+        text-decoration: none !important;
+        border: 2px solid #0a0a0a;
+        border-radius: 50%;
+        padding: 8px;
+    }
+}

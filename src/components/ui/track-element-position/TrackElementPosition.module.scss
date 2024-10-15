@@ -36,7 +36,7 @@
                 }
 
                 .type {
-                    @include text(left, 18px, 5vw, 35px, #fff, 500);
+                    @include text(left, 14px, 2vw, 35px, #fff, 500);
                     color: #fff;
                     transform: translate(100px);
                 }
@@ -61,7 +61,7 @@
                 .item_description_box {
                     @include flex(flex-start, center);
                     flex-direction: column;
-                    width: 700px;
+                    width: clamp(500px, 35vw, 700px);
                     height: 600px;
                     gap: 40px;
 
@@ -73,12 +73,12 @@
 
                         .info {
                             width: 100%;
-                            @include text(left, 20px, 5vw, 35px, var(--title), 600);
+                            @include text(left, 20px, 3vw, 35px, var(--title), 600);
                         }
 
                         .description {
                             width: 100%;
-                            @include text(left, 14px, 5vw, 18px, var(--desc), 600);
+                            @include text(left, 14px, 1vw, 18px, var(--desc), 600);
                         }
                     }
                 }

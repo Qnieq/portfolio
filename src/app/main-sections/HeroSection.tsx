@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import styles from "@/app/main.module.scss"
 import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
+import { ContactsBox } from "@/components/ui/contacts-box/ContactsBox";
 
 const description = [
     {
@@ -16,7 +17,6 @@ const description = [
 ]
 
 const HeroSection = () => {
-
 
     const [width, setWidth] = useState<number>(window.innerWidth)
 
@@ -35,6 +35,7 @@ const HeroSection = () => {
             window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
         }
     }, [])
+
     return (
         <section className={styles.hero_section}>
             <div className={styles.title_container}>
@@ -80,7 +81,7 @@ const HeroSection = () => {
                             {desc.text}
                         </motion.p>
                     ))}
-                    {/* <motion.a
+                    <motion.a
                         initial={{
                             translateY: 100,
                         }}
@@ -94,12 +95,11 @@ const HeroSection = () => {
                             type: "spring",
                             bounce: 0.05
                         }}
-                        href=""
                         className={styles.contact}
                     >
                         СВЯЗАТЬСЯ
                         <Image width={20} height={20} src={"/icons/arrow-right.svg"} alt="arrow" />
-                    </motion.a> */}
+                    </motion.a>
                 </div>
             </div>
 
@@ -150,7 +150,6 @@ const HeroSection = () => {
                         <Image width={post.width} height={post.height} src={post.src} alt="" className={styles.poster} />
                     </motion.div>
                 ))}
-
             </div>
         </section>
     );

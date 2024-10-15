@@ -6,37 +6,37 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion"
 
-const navigation: { link: string, title: string }[] = [
-    // {
-    //     link: "#works",
-    //     title: "Works"
-    // },
-    // {
-    //     link: "#experience",
-    //     title: "Experience"
-    // },
-    // {
-    //     link: "#about",
-    //     title: "About"
-    // },
-    // {
-    //     link: "#contact",
-    //     title: "Contact"
-    // },
-];
+// const navigation: { link: string, title: string }[] = [
+//     // {
+//     //     link: "#works",
+//     //     title: "Works"
+//     // },
+//     // {
+//     //     link: "#experience",
+//     //     title: "Experience"
+//     // },
+//     // {
+//     //     link: "#about",
+//     //     title: "About"
+//     // },
+//     // {
+//     //     link: "#contact",
+//     //     title: "Contact"
+//     // },
+// ];
 
 const Header = () => {
 
-    const [width, setWidth] = useState<number>(window.innerWidth)
-    const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
+    // const [width, setWidth] = useState<number>(window.innerWidth)
+    // const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
-    useEffect(() => {
-        window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+    // useEffect(() => {
+    //     window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
 
-        return () => {
-            window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
-        }
-    }, [])
+    //     return () => {
+    //         window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+    //     }
+    // }, [])
 
     return (
         <motion.header
@@ -67,14 +67,14 @@ const Header = () => {
                     </h5>
                     <Link href={"/"} className={styles.logo_link} />
                 </div>
-                <nav className={styles.navigation}>
+                {/* <nav className={styles.navigation}>
                     {navigation.map((nav, index) => (
                         <Link key={index} href={nav.link} className={styles.link}>
                             {nav.title}
                         </Link>
                     ))}
-                </nav>
-                {width < 839 && (
+                </nav> */}
+                {/* {width < 839 && (
                     menuIsOpen ?
                         <Image src={"/icons/close.svg"} alt="" width={25} height={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
                         :
@@ -90,7 +90,7 @@ const Header = () => {
                             </div>
                         ))}
                     </nav>
-                )}
+                )} */}
             </section>
         </motion.header>
     );

@@ -1,0 +1,76 @@
+@import "@/app/mixins";
+
+.container {
+    @include flex(flex-start, center);
+    width: 100%;
+    height: 200vh;
+    // border: 1px solid #fff;
+
+    .branch {
+        position: absolute;
+        background: var(--about-bg);
+        width: 4px;
+    }
+
+    .info_container {
+        @include flex(flex-start, flex-end);
+        position: sticky;
+        top: 38%;
+        margin: auto;
+        width: 100%;
+        background: var(--main-bg);
+
+        .info {
+            position: absolute;
+            right: 40%;
+            opacity: 0;
+            width: 100px;
+
+            .text {
+                @include text(center, 14px, 2vw, 18px, var(--title), 500)
+            }
+        }
+
+        .visible {
+            animation: visible 1s ease-in-out forwards !important;
+        }
+
+        .disable {
+            animation: disable 1s ease-in-out forwards !important;
+        }
+
+        @keyframes visible {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes disable {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .point {
+            position: absolute;
+            width: 20px;
+            height: 100vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            background: var(--main-bg);
+        }
+    }
+}

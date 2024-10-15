@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import BgEffect from "@/components/ui/bg-effect/BgEffect";
-import Header from "@/components/shared/header/Header";
+import Header from "@/components/ui/header/Header";
 
 const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] });
 
