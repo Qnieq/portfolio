@@ -32,9 +32,6 @@ export function WorkBranch({
 
     scrollYProgress.on("change", (e) => setScrollingValue(e))
 
-    useEffect(() => {
-        console.log(scrollingValue)
-    }, [scrollingValue])
     return (
         <div className={styles.container} ref={container}>
             <motion.div
