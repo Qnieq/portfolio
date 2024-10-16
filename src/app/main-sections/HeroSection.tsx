@@ -7,7 +7,7 @@ import { ContactsBox } from "@/components/ui/contacts-box/ContactsBox";
 
 const description = [
     {
-        text: 'Я fullstack разработчик, специализирующийся на создании масштабируемых и надежных решений.',
+        text: 'Я fullstack разработчик, специализирующийся на создании масштабируемых и надежных приложений.',
         delay: 1.5
     },
     {
