@@ -1,4 +1,4 @@
-import { Mail, Send } from "lucide-react";
+import { Github, Mail, Send } from "lucide-react";
 import Link from "next/link";
 import styles from "./ContactsBox.module.scss"
 
@@ -10,6 +10,9 @@ export function ContactsBox() {
             </Link>
             <Link href="https://t.me/michael999ant" className={styles.link}>
                 <Send size={25} color="#0a0a0a" />
+            </Link>
+            <Link href="https://github.com/Qnieq" className={styles.link}>
+                <Github size={25} color="#0a0a0a" />
             </Link>
         </div>
     );

@@ -4,64 +4,84 @@
     @include flex(flex-start, center);
     width: 100%;
     height: 200vh;
-    // border: 1px solid #fff;
 
     .branch {
         position: absolute;
-        background: var(--about-bg);
+        background: var(--branch);
         width: 4px;
     }
 
     .info_container {
         @include flex(flex-start, flex-end);
         position: sticky;
-        top: 38%;
+        top: 48%;
         margin: auto;
         width: 100%;
         background: var(--main-bg);
 
         .info {
+            @include flex(center, space-evenly);
             position: absolute;
-            right: 40%;
+            top: -50vh;
+            height: 100vh;
             opacity: 0;
-            width: 100px;
+            width: 100%;
+            border-radius: 10px;
+            animation: visible 0.5s ease-in-out forwards !important;
+            z-index: 6;
 
-            .text {
-                @include text(center, 14px, 2vw, 18px, var(--title), 500)
+            .text_blocks {
+                width: 100%;
+                height: 100%;
+                @include flex(center, space-between);
+                flex-direction: column;
+            }
+
+            .title_block {
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                z-index: 8;
+
+                .title {
+                    @include text(center, 25px, 5vw, 50px, var(--title), 700);
+                }
+
+                .role {
+                    @include text(center, 12px, 1vw, 14px, var(--title), 400);
+                }
+
+                .date {
+                    margin-top: 5px;
+                    @include text(center, 12px, 1vw, 14px, var(--title), 400);
+                }
+            }
+
+            .logo_block {
+                position: absolute;
+                width: 100%;
+                z-index: 8;
+
+                .logo_title {
+                    @include text(center, 5em, 20vw, 30em, var(--title), 700);
+                    opacity: 0.05;
+                }
             }
         }
 
         .visible {
-            animation: visible 1s ease-in-out forwards !important;
+            animation: visible 0.5s ease-in-out forwards !important;
         }
 
         .disable {
-            animation: disable 1s ease-in-out forwards !important;
+            animation: disable 0.5s ease-in-out forwards !important;
         }
 
-        @keyframes visible {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes disable {
-            0% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
 
         .point {
             position: absolute;
-            width: 20px;
+            @include flex(flex-start, center);
+            width: 30px;
             height: 100vh;
             left: 0;
             right: 0;
@@ -71,6 +91,79 @@
             margin-right: auto;
             padding: 0;
             background: var(--main-bg);
+            z-index: 5;
+
+            .icon {
+                position: absolute;
+                top: -8px;
+            }
+
+            .spin {
+                position: absolute;
+                top: -15px;
+                z-index: 9;
+                animation: spin 5s linear infinite, scaling 0.2s ease-in-out forwards;
+            }
+
+            .spin.disable {
+                animation: spin 5s linear infinite, scaling_out 0.2s ease-in-out forwards !important;
+            }
+
+            .icon.disable {
+                animation: disable 0.1s ease-in-out forwards !important;
+            }
         }
+    }
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disable {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scaling {
+    0% {
+        scale: 0.8;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes scaling_out {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0.6;
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

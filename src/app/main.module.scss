@@ -203,7 +203,7 @@
                 padding-left: 20px;
 
                 .work_title_company {
-                    @include text(center, 30px, 5vw, 60px, #eee5e0, 100);
+                    @include text(center, 30px, 5vw, 60px, #ede0ee, 100);
                     transition: .3s ease-in;
 
                 }
@@ -287,7 +287,30 @@
     @include flex(center, center);
     flex-direction: column;
     width: 100%;
-    height: 100%
+    height: 100%;
+    padding-bottom: 50vh;
+
+    .block {
+        @include flex(center, space-between);
+        width: 75%;
+        height: 50vh;
+
+        .text_block {
+            width: clamp(200px, 25vw, 400px);
+            @include flex(flex-start, center);
+            flex-direction: column;
+            gap: 5px;
+
+            .title {
+                @include text(left, 18px, 2vw, 38px, var(--title), 900)
+            }
+
+            .text {
+                @include text(left, 12px, 1vw, 18px, var(--title), 800);
+                white-space: pre-wrap;
+            }
+        }
+    }
 }
 
 .experience {
