@@ -1,14 +1,25 @@
 "use client"
 
+import { useEffect, useState } from "react";
 import styles from "./BgEffect.module.scss"
 import { motion } from "framer-motion"
 
 
 const BgEffect = () => {
-    let randomNumber = Math.floor(Math.random() * (30 - (-20) + 1)) + (-20);
-    setInterval(function () {
-      randomNumber = Math.floor(Math.random() * (30 - (-20) + 1)) + (-20);
-    }, 5);
+    const [randomNumber, setRandomNumber] = useState(0);
+
+    // Функция для генерации случайного числа
+    const generateRandomNumber = () => Math.floor(Math.random() * (30 - (-20) + 1)) + (-20);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setRandomNumber(generateRandomNumber());
+        }, 10); // Меняем значение каждые 200 миллисекунд для более плавной анимации
+
+        // Очищаем интервал при размонтировании компонента
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <motion.div
             animate={{
