@@ -3,7 +3,6 @@ import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import BgEffect from "@/components/ui/bg-effect/BgEffect";
 import Header from "@/components/ui/header/Header";
-import { Analytics } from "@vercel/analytics/react"
 
 const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] });
 
@@ -21,7 +20,6 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <BgEffect />
         <Header />
-        <Analytics />
         {children}
       </body>
     </html>
