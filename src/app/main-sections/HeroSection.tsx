@@ -17,8 +17,28 @@ const description = [
 ]
 
 const HeroSection = () => {
+    // Изначально задаем ширину как null
+    const [width, setWidth] = useState<number | null>(null);
 
-    const [width, setWidth] = useState<number>(window.innerWidth)
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            // Устанавливаем начальную ширину после монтирования компонента
+            const initialWidth = window.innerWidth;
+            setWidth(initialWidth);
+
+            const handleResize = () => {
+                setWidth(window.innerWidth);
+            };
+
+            // Добавляем обработчик события resize
+            window.addEventListener("resize", handleResize);
+
+            // Удаляем обработчик при размонтировании компонента
+            return () => {
+                window.removeEventListener("resize", handleResize);
+            };
+        }
+    }, []);
 
     const renderSquares = () => {
         const squares = [];
@@ -28,13 +48,10 @@ const HeroSection = () => {
         return squares;
     };
 
-    useEffect(() => {
-        window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
-
-        return () => {
-            window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
-        }
-    }, [])
+    // Условный рендеринг для анимации, когда ширина известна
+    if (width === null) {
+        return <div className={styles.hero_section}>Loading...</div>; // Можно заменить на пустой блок или прелоадер
+    }
 
     return (
         <section className={styles.hero_section}>

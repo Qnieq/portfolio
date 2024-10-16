@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import styles from "./Header.module.scss"
-import { useEffect, useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion"
 
 // const navigation: { link: string, title: string }[] = [
@@ -55,12 +53,7 @@ const Header = () => {
             className={styles.header}
         >
             <section className={styles.header_box}>
-                <div className={styles.logo_box} onClick={() => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    })
-                }}>
+                <div className={styles.logo_box}>
                     <div className={styles.elem}></div>
                     <h5 className={styles.name_tag}>
                         Michael<br />Orlov
