@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import styles from "@/app/main.module.scss"
 import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
@@ -19,6 +19,7 @@ const description = [
 const HeroSection = () => {
     // Изначально задаем ширину как null
     const [width, setWidth] = useState<number | null>(null);
+    const [contactsOpen, setContactsOpen] = useState<boolean>(false);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -113,11 +114,39 @@ const HeroSection = () => {
                             bounce: 0.05
                         }}
                         className={styles.contact}
+                        onClick={() => { setContactsOpen(!contactsOpen) }}
                     >
                         СВЯЗАТЬСЯ
                         <Image width={20} height={20} src={"/icons/arrow-right.svg"} alt="arrow" />
                     </motion.a>
                 </div>
+                <AnimatePresence>
+                    {contactsOpen &&
+                        <motion.div
+                            initial={{
+                                translateY: 50,
+                                opacity: 0,
+                            }}
+                            animate={{
+                                translateY: 0,
+                                opacity: 1,
+                            }}
+                            exit={{
+                                translateY: 50,
+                                opacity: 0,
+                            }}
+                            transition={{
+                                ease: "linear",
+                                duration: 0.4,
+                                type: "spring",
+                                bounce: 0.05
+                            }}
+                            className={styles.contacts_module}
+                        >
+                            <ContactsBox />
+                        </motion.div>
+                    }
+                </AnimatePresence>
             </div>
 
             <div className={styles.content}>

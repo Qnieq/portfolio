@@ -19,6 +19,7 @@
         @include width;
         @include flex(flex-start, center);
         flex-direction: column;
+        position: relative;
 
         .title {
             @include text(left, 42px, 6vw, 135px, var(--title), 800);
@@ -46,6 +47,14 @@
                 border-bottom: 2px solid var(--title);
                 cursor: pointer;
             }
+
+        }
+
+        .contacts_module {
+            position: absolute;
+            right: 0;
+            bottom: -130px;
+            z-index: 99;
         }
     }
 
