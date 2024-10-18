@@ -16,7 +16,7 @@ const description = [
     },
 ]
 
-const HeroSection = () => {
+const HeroSection = ({ delay }: { delay?: number }) => {
     // Изначально задаем ширину как null
     const [width, setWidth] = useState<number | null>(null);
     const [contactsOpen, setContactsOpen] = useState<boolean>(false);
@@ -66,7 +66,7 @@ const HeroSection = () => {
                             translateY: 0,
                         }}
                         transition={{
-                            delay: 0.7,
+                            delay: 0.7 + (delay ? delay : 0),
                             ease: "linear",
                             duration: 1.4,
                             type: "spring",
@@ -88,7 +88,7 @@ const HeroSection = () => {
                                 translateY: 0,
                             }}
                             transition={{
-                                delay: desc.delay,
+                                delay: desc.delay + (delay ? delay : 0),
                                 ease: "linear",
                                 duration: 1.3,
                                 type: "spring",
@@ -107,7 +107,7 @@ const HeroSection = () => {
                             translateY: 0,
                         }}
                         transition={{
-                            delay: 2.4,
+                            delay: 2.4 + (delay ? delay : 0),
                             ease: "linear",
                             duration: 1.3,
                             type: "spring",
@@ -158,7 +158,7 @@ const HeroSection = () => {
                         translateX: 0,
                     }}
                     transition={{
-                        delay: 3.1,
+                        delay: 3.1 + (delay ? delay : 0),
                         ease: "linear",
                         duration: 1.5,
                         type: "spring",
@@ -166,7 +166,7 @@ const HeroSection = () => {
                     }}
                     className={styles.bg_element}
                 >
-                    <Image loading="eager" width={400} height={750} src={"/images/photo/selfy.png"}  alt="" className={styles.photo} />
+                    <Image loading="eager" width={400} height={750} src={"/images/photo/selfy.png"} alt="" className={styles.photo} />
                     <div className={styles.squares_box}>
                         {renderSquares()}
                     </div>
@@ -185,7 +185,7 @@ const HeroSection = () => {
                             rotate: 0
                         }}
                         transition={{
-                            delay: post.delay,
+                            delay: post.delay + (delay ? delay : 0),
                             ease: "linear",
                             duration: post.duration,
                             type: "spring",

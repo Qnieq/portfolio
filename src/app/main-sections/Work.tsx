@@ -50,6 +50,7 @@ const Work = () => {
                         >
                             <Link href={`/works/${work.title}`} className={styles.work_link} />
                             <Image
+                                loading="eager"
                                 alt=""
                                 src={work.preview}
                                 width={450}

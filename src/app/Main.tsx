@@ -8,12 +8,21 @@ import Work from "./main-sections/Work";
 import { About } from "./main-sections/About";
 import { Contacts } from "./main-sections/Contacts";
 import { WorkHistory } from "./main-sections/WorkHistory";
+import { LoadingSection } from "@/components/ui/loading-section/LoadingSection";
+import { useEffect } from "react";
+import Header from "@/components/ui/header/Header";
 
 export function Main() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <SmoothScrolling>
+        <SmoothScrolling delay={2.5}>
             <div className={styles.main}>
-                <HeroSection />
+                <Header delay={2.5} />
+                <LoadingSection />
+                <HeroSection delay={2.5} />
                 <About />
                 <WorkHistory />
                 <Experience />

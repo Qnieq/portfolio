@@ -23,7 +23,7 @@ import { motion } from "framer-motion"
 //     // },
 // ];
 
-const Header = () => {
+const Header = ({delay}: {delay?: number}) => {
 
     // const [width, setWidth] = useState<number>(window.innerWidth)
     // const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
@@ -45,7 +45,7 @@ const Header = () => {
                 translateY: 0,
             }}
             transition={{
-                delay: 0.3,
+                delay: 0.3 + (delay ? delay : 0),
                 ease: "linear",
                 duration: 1,
                 type: "spring"
