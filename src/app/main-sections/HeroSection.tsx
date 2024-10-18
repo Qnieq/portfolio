@@ -166,7 +166,7 @@ const HeroSection = () => {
                     }}
                     className={styles.bg_element}
                 >
-                    <Image width={400} height={750} src={"/images/photo/selfy.png"} alt="" className={styles.photo} />
+                    <Image loading="eager" width={400} height={750} src={"/images/photo/selfy.png"}  alt="" className={styles.photo} />
                     <div className={styles.squares_box}>
                         {renderSquares()}
                     </div>
@@ -193,7 +193,7 @@ const HeroSection = () => {
                         }}
                         className={styles.poster_box}
                     >
-                        <Image width={post.width} height={post.height} src={post.src} alt="" className={styles.poster} />
+                        <Image loading="eager" width={post.width} height={post.height} src={post.src} alt="" className={styles.poster} />
                     </motion.div>
                 ))}
             </div>
