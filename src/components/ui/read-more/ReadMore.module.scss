@@ -1,0 +1,53 @@
+@import "@/app/mixins";
+
+.text_block {
+    width: clamp(200px, 25vw, 400px);
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 9;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+
+    &:hover {
+        .read_more {
+            padding: 15px 20px;
+            background: #2b2b2b;
+            color: var(--title);
+        }
+    }
+
+    .title {
+        @include text(left, 18px, 2vw, 38px, var(--title), 700)
+    }
+
+    .text {
+        @include text(left, 12px, 1vw, 17px, var(--title), 500);
+        white-space: pre-wrap;
+    }
+
+    .read_more {
+        @include flex(center, center);
+        @include text(center, 10px, 1vw, 14px, #161616, 900);
+        position: relative;
+        gap: 10px;
+        width: 100%;
+        height: 25px;
+        padding: 10px 20px;
+        background: #161616;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        .icon {
+            position: absolute;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

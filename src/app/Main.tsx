@@ -18,11 +18,11 @@ export function Main() {
     }, []);
 
     return (
-        <SmoothScrolling delay={2.5}>
+        <SmoothScrolling delay={5.5}>
             <div className={styles.main}>
-                <Header delay={2.5} />
+                <Header delay={5.5} />
                 <LoadingSection />
-                <HeroSection delay={2.5} />
+                <HeroSection delay={5.5} />
                 <About />
                 <WorkHistory />
                 <Experience />

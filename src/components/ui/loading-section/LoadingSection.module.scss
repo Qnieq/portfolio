@@ -9,4 +9,10 @@
     height: 100dvh;
     z-index: 10;
     background: var(--main-bg);
+
+    .loader_box {
+        @include flex(center, center);
+        flex-direction: column;
+        width: 300px;
+    }
 }

@@ -1,6 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 import styles from "./WorkBranch.module.scss"
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { CircleDot, CircleDotDashed } from "lucide-react";
 import cn from "clsx"
 

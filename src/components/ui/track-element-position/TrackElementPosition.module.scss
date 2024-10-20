@@ -61,7 +61,7 @@
                 .item_description_box {
                     @include flex(flex-start, center);
                     flex-direction: column;
-                    width: clamp(500px, 35vw, 700px);
+                    width: clamp(400px, 35vw, 700px);
                     height: 600px;
                     gap: 40px;
 
@@ -78,7 +78,7 @@
 
                         .description {
                             width: 100%;
-                            @include text(left, 14px, 1vw, 18px, var(--desc), 600);
+                            @include text(left, 12px, 1vw, 17px, var(--desc), 500);
                         }
                     }
                 }
