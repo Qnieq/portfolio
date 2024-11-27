@@ -1,11 +1,11 @@
 import { Main } from "./Main";
 import { Analytics } from "@vercel/analytics/react"
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
-        <Main />
-        <Analytics />
+      <Main />
+      <Analytics />
     </main>
   );
 }

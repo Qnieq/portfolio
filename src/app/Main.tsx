@@ -15,7 +15,9 @@ import { TopButton } from "@/components/ui/top_button/TopButton";
 
 export function Main() {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
     }, []);
 
     return (

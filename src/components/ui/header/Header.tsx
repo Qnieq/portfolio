@@ -32,14 +32,22 @@ const navigation: { id: string, title: string }[] = [
 
 const Header = ({ delay }: { delay?: number }) => {
 
-    const [width, setWidth] = useState<number>(window.innerWidth)
+    const [width, setWidth] = useState<number>(0)
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
     useEffect(() => {
-        window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+        if (typeof window !== 'undefined') {
+            setWidth(window.innerWidth)
+        }
+    }, []);
 
-        return () => {
-            window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+    
+            return () => {
+                window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+            }
         }
     }, [])
 
