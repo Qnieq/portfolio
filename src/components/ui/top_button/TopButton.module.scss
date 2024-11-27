@@ -12,6 +12,20 @@
     border: 1px solid #eee5e0;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    z-index: 9;
+
+    .go_to_top {
+        z-index: 0;
+        position: absolute;
+        width: 80px;
+        top: -40px;
+        left: -20px;
+        @include text(center, 12px, 1vw, 18px, var(--title), 700);
+        background: #0a0a0a;
+        border: #eee5e0 1px solid;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
 
     .icon {
         position: absolute;
