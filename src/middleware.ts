@@ -15,5 +15,5 @@ export function middleware(req: NextResponse) {
 
 // Настройка путей, на которых работает middleware
 export const config = {
-    matcher: ['/', '/not-allowed'], // Укажите пути, где нужно применить middleware
+    matcher: ['/'], // Укажите пути, где нужно применить middleware
 };
