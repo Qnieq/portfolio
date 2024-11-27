@@ -55,7 +55,7 @@ export const history = [
         color_text: "#D83131",
         title: "the medik",
         date: "Июль 2024 - Ноябрь 2024",
-        role: "",
+        role: "Fullstack developer",
         color_title: "#D83131",
         color_title_logo: "#fff"
     },
