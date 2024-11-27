@@ -5,6 +5,7 @@ import { useState } from "react";
 import cn from "clsx"
 import Link from "next/link";
 import { works } from "./works.data";
+import { motion } from "framer-motion"
 
 const Work = () => {
 
@@ -17,8 +18,16 @@ const Work = () => {
             </div>
             <div className={styles.works_container}>
                 {works.map((work, index) => (
-                    <div
+                    <motion.div
                         key={index}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1}}
+                        transition={{
+                            ease: "easeOut",
+                            duration: 0.5,
+                            delay: 1 + index * 0.2
+                        }}
+                        viewport={{once: true}}
                         className={styles.work_box}
                         onMouseEnter={() => setActive(index)}
                         onMouseLeave={() => setActive(undefined)}
@@ -58,7 +67,7 @@ const Work = () => {
                                 className={styles.preview}
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>
