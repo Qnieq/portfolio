@@ -9,11 +9,9 @@ export function middleware(req: NextResponse) {
     if (isMobile) {
         return NextResponse.redirect(new URL('/not-allowed', req.url));
     }
-
-    return NextResponse.next();
 }
 
 // Настройка путей, на которых работает middleware
 export const config = {
-    matcher: ['/'], // Укажите пути, где нужно применить middleware
+    matcher: ['/'], 
 };
