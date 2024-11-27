@@ -4,6 +4,8 @@ import styles from "@/app/main.module.scss"
 import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
 import { ContactsBox } from "@/components/ui/contacts-box/ContactsBox";
+import { Instagram, Mail, Send } from "lucide-react";
+import { trace } from "console";
 
 const description = [
     {
@@ -16,6 +18,29 @@ const description = [
     },
 ]
 
+const items = [
+    {
+        hint: "Email",
+        icon: <Mail size={25} color="#0a0a0a" />,
+        link: "mailto:misha.o.son@gmail.com",
+        type: "email",
+        color: "#0a0a0a"
+    },
+    {
+        hint: "Telegram",
+        icon: <Send size={25} color="#39a5db" />,
+        link: "https://t.me/michael999ant",
+        type: "",
+        color: "#39a5db"
+    },
+    {
+        hint: "Instagram",
+        icon: <Instagram size={25} color="#fc145d" />,
+        link: "https://www.instagram.com/z4valii/",
+        type: "",
+        color: "#fead16"
+    },
+]
 const HeroSection = ({ delay }: { delay?: number }) => {
     // Изначально задаем ширину как null
     const [width, setWidth] = useState<number | null>(null);
@@ -49,22 +74,26 @@ const HeroSection = ({ delay }: { delay?: number }) => {
         return squares;
     };
 
+    const textAnimations = {
+        start: { translateY: 200 },
+        end: { translateY: 0 },
+    }
+
     // Условный рендеринг для анимации, когда ширина известна
     if (width === null) {
         return <div className={styles.hero_section}>Loading...</div>; // Можно заменить на пустой блок или прелоадер
     }
+
+
 
     return (
         <section className={styles.hero_section}>
             <div className={styles.title_container}>
                 <div style={{ overflow: "hidden" }}>
                     <motion.h1
-                        initial={{
-                            translateY: 200,
-                        }}
-                        animate={{
-                            translateY: 0,
-                        }}
+                        variants={textAnimations}
+                        initial="start"
+                        animate="end"
                         transition={{
                             delay: 0.7 + (delay ? delay : 0),
                             ease: "linear",
@@ -81,12 +110,9 @@ const HeroSection = ({ delay }: { delay?: number }) => {
                     {description.map((desc, index) => (
                         <motion.p
                             key={index}
-                            initial={{
-                                translateY: 200,
-                            }}
-                            animate={{
-                                translateY: 0,
-                            }}
+                            variants={textAnimations}
+                            initial="start"
+                            animate="end"
                             transition={{
                                 delay: desc.delay + (delay ? delay : 0),
                                 ease: "linear",
@@ -100,12 +126,8 @@ const HeroSection = ({ delay }: { delay?: number }) => {
                         </motion.p>
                     ))}
                     <motion.a
-                        initial={{
-                            translateY: 100,
-                        }}
-                        animate={{
-                            translateY: 0,
-                        }}
+                        initial={{ translateY: 100 }}
+                        animate={{ translateY: 0 }}
                         transition={{
                             delay: 2.4 + (delay ? delay : 0),
                             ease: "linear",
@@ -143,7 +165,7 @@ const HeroSection = ({ delay }: { delay?: number }) => {
                             }}
                             className={styles.contacts_module}
                         >
-                            <ContactsBox />
+                            <ContactsBox items={items} />
                         </motion.div>
                     }
                 </AnimatePresence>

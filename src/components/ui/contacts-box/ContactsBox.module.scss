@@ -1,12 +1,18 @@
 @import "@/app/mixins";
 
 .box {
-    @include flex(center, center);
+    @include flex(center, flex-start);
+    flex-direction: column;
     height: 50px;
-    padding: 40px;
+    padding: 35px;
     border-radius: 30px;
     background: #eee5e0;
-    gap: 20px;
+    gap: 10px;
+
+    .links_box {
+        @include flex(center, center);
+        gap: 20px;
+    }
 
     .link {
         @include flex(center, center);

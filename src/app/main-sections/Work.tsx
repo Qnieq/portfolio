@@ -12,7 +12,7 @@ const Work = () => {
 
     return (
         <section className={styles.work}>
-            <div className={styles.title}>
+            <div className={styles.title} id="works">
                 <AnimateBigWords value={["WORK ", "WORK ", "WORK ", "WORK ", "WORK ", "WORK ", "WORK ",]} />
             </div>
             <div className={styles.works_container}>

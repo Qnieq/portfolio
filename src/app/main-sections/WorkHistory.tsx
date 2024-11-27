@@ -12,7 +12,7 @@ interface TextStyle {
 
 export function WorkHistory() {
     return (
-        <section className={styles.work_history}>
+        <section className={styles.work_history} id="work history">
             {history.map((item, index) => {
                 const textGroups: string[][] = item.text.reduce<string[][]>((acc, text, idx) => {
                     const groupIndex = Math.floor(idx / 2);

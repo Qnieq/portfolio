@@ -6,11 +6,12 @@ import HeroSection from "./main-sections/HeroSection";
 import styles from "./main.module.scss"
 import Work from "./main-sections/Work";
 import { About } from "./main-sections/About";
-import { Contacts } from "./main-sections/Contacts";
+import { SocialMedia } from "./main-sections/SocialMedia";
 import { WorkHistory } from "./main-sections/WorkHistory";
 import { LoadingSection } from "@/components/ui/loading-section/LoadingSection";
 import { useEffect } from "react";
 import Header from "@/components/ui/header/Header";
+import { TopButton } from "@/components/ui/top_button/TopButton";
 
 export function Main() {
     useEffect(() => {
@@ -27,7 +28,8 @@ export function Main() {
                 <WorkHistory />
                 <Experience />
                 <Work />
-                <Contacts />
+                <SocialMedia />
+                <TopButton />
             </div>
         </SmoothScrolling>
     );

@@ -42,9 +42,10 @@
             @include flex(center, center);
             gap: 50px;
 
-            .link {
+            .nav_title {
                 @include text(left, 12px, 3vw, 15px, var(--title), 600);
                 text-decoration: none;
+                cursor: pointer;
             }
         }
 

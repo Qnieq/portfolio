@@ -9,7 +9,7 @@ const paragraph2 = "Моя сильная сторона — это умение
 
 export function About() {
     return (
-        <section className={styles.about}>
+        <section className={styles.about} id="about">
             <Paragraph paragraph={paragraph1} />
             <ParallaxText baseVelocity={-1}>Who I am</ParallaxText>
             <ParallaxText baseVelocity={1}>Fullstack developer</ParallaxText>

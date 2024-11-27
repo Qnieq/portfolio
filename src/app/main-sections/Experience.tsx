@@ -149,7 +149,7 @@ const experience = [
 
 export function Experience() {
     return (
-        <div className={styles.experience}>
+        <div className={styles.experience} id="experience">
             <div className={styles.parallax_box}>
                 <ParallaxText baseVelocity={-0.5}>my experience my experience</ParallaxText>
                 <ParallaxText baseVelocity={0.8}>fullstack developer fullstack developer</ParallaxText>

@@ -2,39 +2,53 @@
 
 import Link from "next/link";
 import styles from "./Header.module.scss"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
-// const navigation: { link: string, title: string }[] = [
-//     // {
-//     //     link: "#works",
-//     //     title: "Works"
-//     // },
-//     // {
-//     //     link: "#experience",
-//     //     title: "Experience"
-//     // },
-//     // {
-//     //     link: "#about",
-//     //     title: "About"
-//     // },
-//     // {
-//     //     link: "#contact",
-//     //     title: "Contact"
-//     // },
-// ];
+const navigation: { id: string, title: string }[] = [
+    {
+        id: "works",
+        title: "Works"
+    },
 
-const Header = ({delay}: {delay?: number}) => {
+    {
+        id: "experience",
+        title: "Experience"
+    },
+    {
+        id: "about",
+        title: "About"
+    },
+    {
+        id: "work history",
+        title: "Work history"
+    },
+    {
+        id: "social media",
+        title: "Social media"
+    },
+];
 
-    // const [width, setWidth] = useState<number>(window.innerWidth)
-    // const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
+const Header = ({ delay }: { delay?: number }) => {
 
-    // useEffect(() => {
-    //     window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+    const [width, setWidth] = useState<number>(window.innerWidth)
+    const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
-    //     return () => {
-    //         window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
-    //     }
-    // }, [])
+    useEffect(() => {
+        window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+
+        return () => {
+            window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
+        }
+    }, [])
+
+    const scrollToElement = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <motion.header
@@ -60,30 +74,56 @@ const Header = ({delay}: {delay?: number}) => {
                     </h5>
                     <Link href={"/"} className={styles.logo_link} />
                 </div>
-                {/* <nav className={styles.navigation}>
+                <nav className={styles.navigation}>
                     {navigation.map((nav, index) => (
-                        <Link key={index} href={nav.link} className={styles.link}>
+                        <h5 key={index} className={styles.nav_title} onClick={() => scrollToElement(nav.id)}>
                             {nav.title}
-                        </Link>
+                        </h5>
                     ))}
-                </nav> */}
-                {/* {width < 839 && (
+                </nav>
+                {width < 839 && (
                     menuIsOpen ?
-                        <Image src={"/icons/close.svg"} alt="" width={25} height={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
+                        <Image src={"/icons/close.svg"} alt="" width={30} height={30} onClick={() => setMenuIsOpen(!menuIsOpen)} />
                         :
                         <Image src={"/icons/menu.svg"} alt="" width={30} height={30} onClick={() => setMenuIsOpen(!menuIsOpen)} />
                 )}
-                {width < 839 && menuIsOpen && (
-                    <nav className={styles.mobile_nav}>
-                        {navigation.map((nav, index) => (
-                            <div key={index} className={styles.nav_block}>
-                                <Link href={nav.link} className={styles.link}>
-                                    {nav.title}
-                                </Link>
-                            </div>
-                        ))}
-                    </nav>
-                )} */}
+                <AnimatePresence>
+                    {width < 839 && menuIsOpen && (
+                        <motion.nav
+                            className={styles.mobile_nav}
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 100 }}
+                            transition={{
+                                ease: "easeOut",
+                                duration: 0.5,
+                                type: "spring",
+                                bounce: 0.05,
+                            }}
+                        >
+                            {navigation.map((nav, index) => (
+                                <motion.div
+                                    key={index}
+                                    className={styles.nav_block}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 100 }}
+                                    transition={{
+                                        ease: "easeOut",
+                                        duration: 0.5,
+                                        type: "spring",
+                                        bounce: 0.05,
+                                        delay: index * 0.2
+                                    }}
+                                >
+                                    <h5 key={index} className={styles.nav_title} onClick={() => scrollToElement(nav.id)}>
+                                        {nav.title}
+                                    </h5>
+                                </motion.div>
+                            ))}
+                        </motion.nav>
+                    )}
+                </AnimatePresence>
             </section>
         </motion.header>
     );

@@ -1,0 +1,39 @@
+@import "@/app/mixins";
+
+.btn_top {
+    width: 24px;
+    height: 24px;
+    padding: 30px;
+    position: fixed;
+    bottom: 40px;
+    right: 100px;
+    background: #0a0a0a;
+    border-radius: 20px;
+    border: 1px solid #eee5e0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+        background: #eee5e0;
+        border-color: #ccc4c4;
+
+        .icon {
+            stroke: #0a0a0a;
+        }
+    }
+
+    &:active {
+        background: #ccc4c4;
+        border-color: #ccc4c4;
+    }
+}
