@@ -35,7 +35,7 @@ const experience = [
                     },
                     {
                         title: "TanStack Query",
-                        description: "Зачастую использую для обращения к API",
+                        description: "",
                         icon: <Spline scene="https://prod.spline.design/OnWheliN0R7P4VQt/scene.splinecode" />
                     },
                 ]
@@ -128,7 +128,7 @@ const experience = [
                 data: [
                     {
                         title: "TypeScript",
-                        description: "Использую больше чем 1.5 года, типизирую что только можно :)",
+                        description: "Использую больше чем 1.5 года, типизирую что только можно",
                         icon: <Spline scene="https://prod.spline.design/wY3VPjapsX5NJv0P/scene.splinecode" />
                     },
                     {

@@ -30,7 +30,7 @@ export function Main() {
                 <WorkHistory />
                 <Experience />
                 <Work />
-                <SocialMedia />
+                {/* <SocialMedia /> */}
                 <TopButton />
             </div>
         </SmoothScrolling>

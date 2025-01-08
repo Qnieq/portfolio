@@ -29,7 +29,7 @@ const items = [
     {
         hint: "Telegram",
         icon: <Send size={25} color="#39a5db" />,
-        link: "https://t.me/michael999ant",
+        link: "https://t.me/michael_zavali",
         type: "",
         color: "#39a5db"
     },

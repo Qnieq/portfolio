@@ -74,7 +74,7 @@
             position: relative;
 
             .photo {
-                width: clamp(150px, 30vw, 500px);
+                width: clamp(150px, 25vw, 500px);
                 height: clamp(250px, 30vw, 600px);
                 z-index: 8;
                 filter: brightness(0.8);
