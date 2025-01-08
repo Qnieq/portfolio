@@ -33,13 +33,6 @@ const items = [
         type: "",
         color: "#39a5db"
     },
-    {
-        hint: "Instagram",
-        icon: <Instagram size={25} color="#fc145d" />,
-        link: "https://www.instagram.com/z4valii/",
-        type: "",
-        color: "#fead16"
-    },
 ]
 const HeroSection = ({ delay }: { delay?: number }) => {
     // Изначально задаем ширину как null

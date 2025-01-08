@@ -11,27 +11,27 @@ const items = [
         type: "",
         color: "#39a5db"
     },
-    {
-        hint: "YouTube",
-        icon: <Youtube size={25} color="#ff0034" />,
-        link: "https://www.youtube.com/@z4valii",
-        type: "",
-        color: "#ff0034"
-    },
-    {
-        hint: "Instagram",
-        icon: <Instagram size={25} color="#fc145d" />,
-        link: "https://www.instagram.com/z4valii/",
-        type: "",
-        color: "#fead16"
-    },
-    {
-        hint: "TikTok",
-        icon: <Music2 size={25} color="#ea284e" />,
-        link: "https://www.tiktok.com/@qneqone",
-        type: "",
-        color: "#121212"
-    },
+    // {
+    //     hint: "YouTube",
+    //     icon: <Youtube size={25} color="#ff0034" />,
+    //     link: "https://www.youtube.com/@z4val",
+    //     type: "",
+    //     color: "#ff0034"
+    // },
+    // {
+    //     hint: "Instagram",
+    //     icon: <Instagram size={25} color="#fc145d" />,
+    //     link: "https://www.instagram.com/z4val/",
+    //     type: "",
+    //     color: "#fead16"
+    // },
+    // {
+    //     hint: "TikTok",
+    //     icon: <Music2 size={25} color="#ea284e" />,
+    //     link: "https://www.tiktok.com/@qneqo",
+    //     type: "",
+    //     color: "#121212"
+    // },
 ]
 
 export function SocialMedia() {
