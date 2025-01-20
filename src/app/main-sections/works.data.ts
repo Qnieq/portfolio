@@ -12,12 +12,6 @@ export const works = [
         title: "IPhoner"
     },
     {
-        project_name: "Restaurant Website",
-        preview: "/images/works_preview/gericht.png",
-        url: "https://gericht-rest-rho.vercel.app",
-        title: "Gericht"
-    },
-    {
         project_name: "Website",
         preview: "/images/works_preview/typing-tracker.png",
         url: "https://typing-tracker.vercel.app",
