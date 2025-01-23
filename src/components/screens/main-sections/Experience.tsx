@@ -13,12 +13,12 @@ const experience = [
                 data: [
                     {
                         title: "React",
-                        description: "home.experience.frameworks.react.desc",
+                        description: "home.experience.Frontend.frameworks.react.desc",
                         icon: <Spline scene="https://prod.spline.design/w0UkrXpcn8uuL2Io/scene.splinecode" />
                     },
                     {
                         title: "Next.js",
-                        description: "home.experience.frameworks.next.desc",
+                        description: "home.experience.Frontend.frameworks.next.desc",
                         icon: <Spline scene="https://prod.spline.design/4SjgZvupdw0ScQ9K/scene.splinecode" />
                     },
                 ]
@@ -29,7 +29,7 @@ const experience = [
                 data: [
                     {
                         title: "Redux toolkit & RTK Query",
-                        description: "Сейчас в основном его использую только как State management, но раньше пользовался ещё и RTK Query",
+                        description: "home.experience.Frontend.state.redux.desc",
                         icon: <Spline scene="https://prod.spline.design/fsx9kUMr7vtBWrsg/scene.splinecode" />
                     },
                     {
@@ -44,12 +44,12 @@ const experience = [
                 data: [
                     {
                         title: "CSS",
-                        description: "Grid, flex, псевдо классы, глобальные переменные - это всё мне известно :)",
+                        description: "home.experience.Frontend.styling.css.desc",
                         icon: <Spline scene="https://prod.spline.design/NPN6sychhfTWQxq5/scene.splinecode" />
                     },
                     {
                         title: "SASS",
-                        description: "Классный предпроцессор, где есть mixin, переменные, иерархия, удобные шорткаты - лайк",
+                        description: "home.experience.Frontend.styling.SASS.desc",
                         icon: <Spline scene="https://prod.spline.design/eox5jfhaksdjXSOQ/scene.splinecode" />
                     },
                 ]
@@ -59,7 +59,7 @@ const experience = [
                 data: [
                     {
                         title: "Vite",
-                        description: "React приложения собираю через только через Vite, на мой взгяд намного быстрее билдит и удобнее чем webpack",
+                        description: "home.experience.Frontend.Build.Vite.desc",
                         icon: <Spline scene="https://prod.spline.design/8QmUICAbO51UzqIg/scene.splinecode" />
                     },
                 ]
@@ -75,12 +75,12 @@ const experience = [
                 data: [
                     {
                         title: "Nest.js",
-                        description: "Пока что самый любимый фреймворк для бэка. Работал с JWT авторизацией используя Cookie, создавал кастомные декораторы и тд. Опыт больше года",
+                        description: "home.experience.Backend.Frameworks.Nest.desc",
                         icon: <Spline scene="https://prod.spline.design/8mZji99ZvQdh4vrg/scene.splinecode" />
                     },
                     {
                         title: "Express.js",
-                        description: "Использовал всего на одном проекте, потом узнал что есть Nest :))",
+                        description: "home.experience.Backend.Frameworks.Express.desc",
                         icon: <Spline scene="https://prod.spline.design/Z2WITm6nBHIxC866/scene.splinecode" />
                     },
                 ]
@@ -91,17 +91,17 @@ const experience = [
                 data: [
                     {
                         title: "PostgreSQL",
-                        description: "На мой взгляд самая удобная бд, в связке с Prisma творит чудеса",
+                        description: "home.experience.Backend.Database.PostgreSQL.desc",
                         icon: <Spline scene="https://prod.spline.design/iesHgzcb6u-sGBCd/scene.splinecode" />
                     },
                     {
                         title: "Google Firebase",
-                        description: "Доводилось работать со Storage, Firabase database и Realtime database",
+                        description: "home.experience.Backend.Database.Firebase.desc",
                         icon: <Spline scene="https://prod.spline.design/DqYknmOnCD5HOMzt/scene.splinecode" />
                     },
                     {
                         title: "Prisma",
-                        description: "Удобней чем это я ни чем не пользовался, самое сложное что было в моей практике - это работа с транзакциями",
+                        description: "home.experience.Backend.ORM.Prisma.desc",
                         icon: <Spline scene="https://prod.spline.design/Tv83ENlsIilhy9wC/scene.splinecode" />
                     },
                 ]
@@ -127,7 +127,7 @@ const experience = [
                 data: [
                     {
                         title: "TypeScript",
-                        description: "Использую больше чем 1.5 года, типизирую что только можно",
+                        description: "home.experience.Other.TypeScript.desc",
                         icon: <Spline scene="https://prod.spline.design/wY3VPjapsX5NJv0P/scene.splinecode" />
                     },
                     {
@@ -137,7 +137,7 @@ const experience = [
                     },
                     {
                         title: "Git",
-                        description: "Удобный инструмент для управления версиями",
+                        description: "home.experience.Other.Git.desc",
                         icon: <Spline scene="https://prod.spline.design/YBh8aO3HvwGwAtTE/scene.splinecode" />
                     },
                 ]

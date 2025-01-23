@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./ReadMore.module.scss"
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion } from "framer-motion"
+import { useDictionaryStore } from "@/store/useDictionaryStore";
 
 interface IReadMore {
     title: string;
@@ -26,6 +27,8 @@ const textStyles: TextStyle = {
 
 export function ReadMore({ title, text, text_color, title_color }: IReadMore) {
 
+    const dictionary = useDictionaryStore((state) => state.dictionary);
+    
     const [isOpen, setIsOpen] = useState(false);
     const [showReadMore, setShowReadMore] = useState(false);
 
@@ -55,7 +58,7 @@ export function ReadMore({ title, text, text_color, title_color }: IReadMore) {
                 className={styles.title}
                 style={{ color: title_color }}
             >
-                {title}
+                {dictionary[title]}
             </h1>
             <motion.div
                 style={{ overflow: 'hidden' }}
@@ -84,7 +87,7 @@ export function ReadMore({ title, text, text_color, title_color }: IReadMore) {
                     }}
                     ref={textRef}
                 >
-                    {text}
+                    {dictionary[text]}
                 </motion.p>
             </motion.div>
             {showReadMore &&

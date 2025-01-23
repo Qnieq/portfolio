@@ -5,14 +5,15 @@ import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
 import { ContactsBox } from "@/components/ui/contacts-box/ContactsBox";
 import { Mail, Send } from "lucide-react";
+import { useDictionaryStore } from "@/store/useDictionaryStore";
 
 const description = [
     {
-        text: 'Я fullstack разработчик, специализирующийся на создании масштабируемых и надежных приложений.',
+        text: 'home.herosection.desc1',
         delay: 1.5
     },
     {
-        text: 'Моя цель — помогать бизнесам расти за счет инновационных и эффективных веб-решений.',
+        text: 'home.herosection.desc2',
         delay: 2
     },
 ]
@@ -37,6 +38,8 @@ const HeroSection = ({ delay }: { delay?: number }) => {
     // Изначально задаем ширину как null
     const [width, setWidth] = useState<number | null>(null);
     const [contactsOpen, setContactsOpen] = useState<boolean>(false);
+
+    const dictionary = useDictionaryStore((state) => state.dictionary);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -77,7 +80,6 @@ const HeroSection = ({ delay }: { delay?: number }) => {
     }
 
 
-
     return (
         <section className={styles.hero_section}>
             <div className={styles.title_container}>
@@ -114,7 +116,7 @@ const HeroSection = ({ delay }: { delay?: number }) => {
                             }}
                             className={styles.desc}
                         >
-                            {desc.text}
+                            {dictionary[desc.text]}
                         </motion.p>
                     ))}
                     <motion.a
@@ -130,7 +132,7 @@ const HeroSection = ({ delay }: { delay?: number }) => {
                         className={styles.contact}
                         onClick={() => { setContactsOpen(!contactsOpen) }}
                     >
-                        СВЯЗАТЬСЯ
+                        {dictionary["home.herosection.getInTouch"]}
                         <Image width={20} height={20} src={"/icons/arrow-right.svg"} alt="arrow" />
                     </motion.a>
                 </div>
@@ -207,7 +209,7 @@ const HeroSection = ({ delay }: { delay?: number }) => {
                         }}
                         className={styles.poster_box}
                     >
-                        <Image loading="eager" width={post.width} height={post.height} src={post.src} alt="" className={styles.poster} />
+                        <Image width={post.width} height={post.height} src={post.src} alt="" className={styles.poster} />
                     </motion.div>
                 ))}
             </div>

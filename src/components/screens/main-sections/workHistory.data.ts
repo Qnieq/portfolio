@@ -1,30 +1,30 @@
 export const history = [
     {
         text: [
-            "Проект представляет собой интернет-магазин техники Apple написанный на React.js + Redux TK",
+            "home.workHistory.IPhoner.text1",
             "",
-            `1. Роутинг React-router-dom\n\n2. Страница с товарами и работа с API с помощью клиента Axios\n\n3. Страница товара\n\n4. Корзина с использованием Redux-persist для сохранения корзины в localstorage\n\n5. Трейд-ин (расчет стоимости б/у девайса)\n\n6. Redux/ReduxToolKit. Асинхронные экшены Redux-thunk`,
-            "т.к. это был мой первый E-commerce проект, было затруднительно реализовать работу с API, а так же было затруднительно работать со slice в Redux TK"
+            `home.workHistory.IPhoner.text3`,
+            "home.workHistory.IPhoner.text4"
         ],
-        text_block_title: ["О проекте", "", "Что реализовал?", "Сложности"],
+        text_block_title: ["home.workHistory.IPhoner.text_block_title1", "", "home.workHistory.IPhoner.text_block_title3", "home.workHistory.IPhoner.text_block_title4"],
         color_text: "#4024ef",
         title: "IPhoner",
-        date: "Август 2022 - Октябрь 2022",
+        date: "home.workHistory.IPhoner.date",
         role: "Frontend developer",
         color_title: "var(--branch)",
         color_title_logo: "#4024ef"
     },
     {
         text: [
-            "Компания занимается оптовой торговлей шихтовыми материалами и стояла задача реализовать сайт для компании и платформу для обучения сотрудников",
-            `Сайт для mervice.\n\nПолностью написал фронт на React. Трудности, с которыми я столкнулся, были анимация скролла страницы по слайдам на разных девайсах и добавление новостей, а именно добавление фотографий. Скролл я починил добавив delay и игнорируя лишние скролл ивенты, а проблему с фотографиями решил через formdata.\n\nБекенд был для меня в новинку и самое непонятное было понять как получать request и как их отдавать response. Познакомился с Express.js. Реализовал эндпоинты для админки, где опять же вызвало трудности работа с файлами.`,
-            `Познакомился с Next-ом и ISR в нём, Sass, RTK Query, TypeScript.\nНа backend-е познакомился с Express.js (роутинг, обращения к бд, создание эндпоинтов и сервисов).\n\nНаучился работать с Git-ом в команде.\n\nУзнал о firebase и единственная трудность с которой я столкнулся, это хранение файлов в storage - очень много часов ушло на то, чтобы понять как правильно все подключить и отправлять файлы, а потом и забирать.\n\nСамое сложное было изучить и понять принципы работы backend-а`,
-            `Платформа для обучения.\n\nНа фронте я реализовал всю логику для quiz-ов и статистику пользователя. Очень много взаимодействовал с Redux toolkit, когда реализовывал квизы. Единственная проблема с которой я столкнулся это статистика: часто приходили не те данные из других модулей, над которыми работали другие разработчики, а они были в другом часовом поясе и скооперироваться с ними было проблемно. Для отображения статистики я использовал графики, было на удивление не сложно.`
+            "home.workHistory.mervice.text1",
+            `home.workHistory.mervice.text2`,
+            `home.workHistory.mervice.text3`,
+            `home.workHistory.mervice.text4`
         ],
-        text_block_title: ["О Компании", "Project №1", "Что нового?", "Project №2"],
+        text_block_title: ["home.workHistory.mervice.text_block_title1", "home.workHistory.mervice.text_block_title2", "home.workHistory.mervice.text_block_title3", "home.workHistory.mervice.text_block_title4"],
         color_text: "#5ABB47",
         title: "mervice",
-        date: "Ноябрь 2022 - Январь 2024",
+        date: "home.workHistory.mervice.date",
         role: "FullStack developer",
         color_title: "var(--branch)",
         color_title_logo: "#5ABB47"
@@ -32,29 +32,29 @@ export const history = [
     {
         text: [
             "",
-            "Попал на стартап проект, задачей которого было разработать веб-приложение, для планирования задач и расписания, а так же для управлением своим временем по средствам pomodoro timer",
-            `Frontend: полностью реализовал dnd систему для "kanban" доски и для time block. Узнал о такой штуке как interceptor на axios для jwt(проверка токенов, обновление, прикрепление токена в bearer) через который идут запросы на бекенд.\n\nBackend: Познакомился с Nest.js, с его декораторами и архитектурой. Было не сложно привыкнуть к нему, потому что напоминал Express. Реализовал микросервисы для time block и тасков - писал их по принципу bff.\n\nПознакомился с Prisma для обращения к PostgreSQL - наверное самое удобное, что только есть, я просто был в восторге.`,
-            "Самой сложной частью было реализация jwt авторизации, потому что впервые реализовывал по такому принципу, а именно написал эндпоинт, который обновляет и создаёт новые токены, после чего отдает их на фронт в куках."
+            "home.workHistory.TaskSync.text2",
+            `home.workHistory.TaskSync.text3`,
+            "home.workHistory.TaskSync.text4"
         ],
-        text_block_title: ["", "Стартап", "Чем занимался?", "Трудности"],
+        text_block_title: ["", "home.workHistory.TaskSync.text_block_title2", "home.workHistory.TaskSync.text_block_title3", "home.workHistory.TaskSync.text_block_title4"],
         color_text: "#dc03e4",
         title: "Task Sync",
-        date: "Январь 2024 - Июль 2024",
+        date: "home.workHistory.TaskSync.date",
         role: "Fullstack developer",
         color_title: "var(--branch)",
         color_title_logo: "#dc03e4"
     },
     {
         text: [
-            "Стартап проект, задачей которого стояла создать сервис, для продвижения личного бренда врачей",
-            `В основном работал на Backend-е и с сервером на nginx.\nНа Frontend-е помогал с jwt авторизацией и созданием настроек в профиле врача`,
-            `Backend: Получилось интегрировать авторизацию через телефон с помощью Plusofon и научился работать с файлами.\n\nВпервые пришлось с нуля настраивать сервер на nginx (настройка прокси, переадресация, написание конфига) и получилось настроить SSL протокол - интересный был опыт\n\nНа Frontend-е написал interceptor в связке с axios для jwt авторизации (запрос проверки токенов, запрос новых токенов, обновление токенов) и под это написал middleware для проверки токенов юзера.\n\nТак же написал страницу настроек в профиле врача, в ходе чего научился Tailwind-у.`,
-            "На проекте я был lead-ом по совместительству, т.к. был самым опытным на проекте. Распределял задачи, выстраивал дальнейшую работу команды, обучал пару сотрудников Nest-у."
+            "home.workHistory.themedik.text1",
+            `home.workHistory.themedik.text2`,
+            `home.workHistory.themedik.text3`,
+            "home.workHistory.themedik.text4"
         ],
-        text_block_title: ["О проекте", "Роль", "Задачи", "Доп. задачи"],
+        text_block_title: ["home.workHistory.themedik.text_block_title2", "home.workHistory.themedik.text_block_title1", "home.workHistory.themedik.text_block_title3", "home.workHistory.themedik.text_block_title4"],
         color_text: "#D83131",
         title: "the medik",
-        date: "Июль 2024 - Ноябрь 2024",
+        date: "home.workHistory.themedik.date",
         role: "Fullstack developer",
         color_title: "#D83131",
         color_title_logo: "#fff"

@@ -1,6 +1,7 @@
+import { useDictionaryStore } from "@/store/useDictionaryStore";
 import styles from "./TrackElementPosition.module.scss"
 import cn from "clsx"
-import { JSX } from "react";
+import { JSX, useEffect } from "react";
 
 interface ITrackWordPositionItem {
     title: string
@@ -17,6 +18,7 @@ interface ITrackWordPositionItem {
 
 export function TrackWordPositionItem({ title, items, side }: ITrackWordPositionItem) {
 
+    const dictionary = useDictionaryStore((state) => state.dictionary);
 
     return (
         <section className={styles.container}>
@@ -47,7 +49,7 @@ export function TrackWordPositionItem({ title, items, side }: ITrackWordPosition
                                         </h4>
 
                                         <p className={styles.description}>
-                                            {item.description}
+                                            {dictionary[item.description]}
                                         </p>
                                     </div>
                                 </div>

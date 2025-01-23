@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import styles from './Paragraph.module.scss';
 import { Press_Start_2P } from "next/font/google";
 import cn from "clsx"
+import { useDictionaryStore } from '@/store/useDictionaryStore';
 
 const press_to_start = Press_Start_2P({ weight: "400", subsets: ["cyrillic", "latin"] })
 
@@ -25,7 +26,9 @@ export default function Paragraph({ paragraph }: IParagraph) {
         offset: ["start 0.8", "start 0.4"]
     })
 
-    const words = paragraph.split(" ")
+    const dictionary = useDictionaryStore((state) => state.dictionary);
+
+    const words = dictionary[paragraph].split(" ")
     return (
         <p
             ref={container}
@@ -59,6 +62,8 @@ const Word = ({ children, progress, range }: IWord) => {
 }
 
 const Char = ({ children, progress, range }: IWord) => {
+
+
     const opacity = useTransform(progress, range, [0, 1])
     return (
         <span>

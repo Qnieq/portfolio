@@ -3,6 +3,7 @@ import styles from "./WorkBranch.module.scss"
 import { useRef, useState } from "react";
 import { CircleDot, CircleDotDashed } from "lucide-react";
 import cn from "clsx"
+import { useDictionaryStore } from "@/store/useDictionaryStore";
 
 interface IWorkBranch {
     title: string
@@ -21,6 +22,8 @@ export function WorkBranch({
     color_title_logo,
     children
 }: IWorkBranch) {
+
+    const dictionary = useDictionaryStore((state) => state.dictionary);
 
     const [scrollingValue, setScrollingValue] = useState<number>(0)
 
@@ -71,7 +74,7 @@ export function WorkBranch({
                             {role}
                         </p>
                         <p className={styles.date}>
-                            {date}
+                            {dictionary[date]}
                         </p>
                     </div>
 

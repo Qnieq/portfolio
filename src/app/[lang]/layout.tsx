@@ -3,8 +3,6 @@ import { Montserrat } from "next/font/google";
 import "../globals.scss";
 import BgEffect from "@/components/ui/bg-effect/BgEffect";
 import { languages } from "@/config/languages";
-import { DictionaryContext } from "@/hooks/useDictionary";
-import { getDictionary } from "./dictionaries/getDictionary";
 
 const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] });
 
@@ -21,20 +19,16 @@ export default async function LangLayout({
     params,
 }: {
     children: React.ReactNode;
-    params: Promise<{lang: string}>
+    params: Promise<{ lang: string }>
 }) {
-    const { lang } = await params; // Await the params to ensure it's resolved
-    const dictionary = await getDictionary(lang);
-    console.log(dictionary)
+
+    const { lang } = await params;
+    
     return (
         <html lang={lang}>
             <body className={montserrat.className}>
                 <BgEffect />
-                {dictionary && (
-                    <DictionaryContext.Provider value={dictionary}>
-                        {children}
-                    </DictionaryContext.Provider>
-                )}
+                {children}
             </body>
         </html>
     );

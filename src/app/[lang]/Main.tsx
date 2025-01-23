@@ -11,13 +11,17 @@ import { LoadingSection } from "@/components/ui/loading-section/LoadingSection";
 import { useEffect } from "react";
 import Header from "@/components/ui/header/Header";
 import { TopButton } from "@/components/ui/top_button/TopButton";
+import { Dictionary } from "@/types/lang.types";
+import { useDictionaryStore } from "@/store/useDictionaryStore";
 
-export function Main() {
+export function Main({ dictionary }: { dictionary: Dictionary }) {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.scrollTo(0, 0);
         }
-    }, []);
+        useDictionaryStore.getState().setDictionary(dictionary)
+
+    }, [dictionary]);
 
     return (
         <SmoothScrolling delay={5.5}>
