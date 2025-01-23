@@ -1,14 +1,7 @@
-import styles from "@/app/main.module.scss"
+import styles from "@/app/[lang]/main.module.scss"
 import { WorkBranch } from "@/components/ui/work-branch/WorkBranch";
 import { history } from "./workHistory.data";
 import { ReadMore } from "@/components/ui/read-more/ReadMore";
-
-interface TextStyle {
-    WebkitLineClamp?: string;
-    WebkitBoxOrient?: 'horizontal' | 'vertical';
-    overflow?: string;
-    display?: string;
-}
 
 export function WorkHistory() {
     return (

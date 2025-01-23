@@ -1,5 +1,5 @@
 import { Terminal } from "@/components/ui/terminal/Terminal";
-import styles from "@/app/main.module.scss"
+import styles from "@/app/[lang]/main.module.scss"
 import { Heading } from "@/components/ui/heading/Heading";
 import { ParallaxText } from "@/components/ui/parallax-text/ParallaxText";
 import Paragraph from "@/components/ui/paragraph/Paragraph";

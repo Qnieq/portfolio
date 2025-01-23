@@ -17,12 +17,6 @@ export const works = [
         url: "https://typing-tracker.vercel.app",
         title: "Typing Tracker"
     },
-    // {
-    //     project_name: "Time management",
-    //     preview: "",
-    //     url: "",
-    //     title: "Task Sync"
-    // },
     {
         project_name: "Social Network",
         preview: "/images/works_preview/themedik.png",

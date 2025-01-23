@@ -1,13 +1,12 @@
 'use client'
 
 import { SmoothScrolling } from "@/components/shared/smooth-scrolling/SmoothScrolling";
-import { Experience } from "./main-sections/Experience";
-import HeroSection from "./main-sections/HeroSection";
+import { Experience } from "../../components/screens/main-sections/Experience";
+import HeroSection from "../../components/screens/main-sections/HeroSection";
 import styles from "./main.module.scss"
-import Work from "./main-sections/Work";
-import { About } from "./main-sections/About";
-import { SocialMedia } from "./main-sections/SocialMedia";
-import { WorkHistory } from "./main-sections/WorkHistory";
+import Work from "../../components/screens/main-sections/Work";
+import { About } from "../../components/screens/main-sections/About";
+import { WorkHistory } from "../../components/screens/main-sections/WorkHistory";
 import { LoadingSection } from "@/components/ui/loading-section/LoadingSection";
 import { useEffect } from "react";
 import Header from "@/components/ui/header/Header";
@@ -30,7 +29,6 @@ export function Main() {
                 <WorkHistory />
                 <Experience />
                 <Work />
-                {/* <SocialMedia /> */}
                 <TopButton />
             </div>
         </SmoothScrolling>

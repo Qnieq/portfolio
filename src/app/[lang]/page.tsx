@@ -1,5 +1,5 @@
-import { Main } from "./Main";
-import { Analytics } from "@vercel/analytics/react"
+import { Main } from './Main';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function Page() {
   return (

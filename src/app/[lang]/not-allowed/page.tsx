@@ -1,6 +1,12 @@
-import styles from "./NotAllowed.module.scss"
+import type { Metadata } from 'next';
+import styles from "./NotAllowed.module.scss";
 
-export function NotAllowed() {
+export const metadata: Metadata = {
+    title: 'Not Allowed',
+};
+
+export default function NotAllowedPage() {
+
     return (
         <div className={styles.not_allowed_box}>
             <h1 className={styles.title}>

@@ -1,11 +1,10 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion"
-import styles from "@/app/main.module.scss"
+import styles from "@/app/[lang]/main.module.scss"
 import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
 import { ContactsBox } from "@/components/ui/contacts-box/ContactsBox";
-import { Instagram, Mail, Send } from "lucide-react";
-import { trace } from "console";
+import { Mail, Send } from "lucide-react";
 
 const description = [
     {

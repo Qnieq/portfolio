@@ -1,7 +1,6 @@
 import { TrackWordPositionItem } from "@/components/ui/track-element-position/TrackWordPositionItem";
-import styles from "@/app/main.module.scss"
+import styles from "@/app/[lang]/main.module.scss"
 import Spline from '@splinetool/react-spline';
-import { Heading } from "@/components/ui/heading/Heading";
 import { ParallaxText } from "@/components/ui/parallax-text/ParallaxText";
 
 const experience = [
@@ -14,12 +13,12 @@ const experience = [
                 data: [
                     {
                         title: "React",
-                        description: "2 года опыта разработки, работаю с hooks, context, routing и другими фишками React",
+                        description: "home.experience.frameworks.react.desc",
                         icon: <Spline scene="https://prod.spline.design/w0UkrXpcn8uuL2Io/scene.splinecode" />
                     },
                     {
                         title: "Next.js",
-                        description: "Использую уже 1.5 года. В основном работаю с ISR, не очень отношусь к SSR :)",
+                        description: "home.experience.frameworks.next.desc",
                         icon: <Spline scene="https://prod.spline.design/4SjgZvupdw0ScQ9K/scene.splinecode" />
                     },
                 ]
@@ -148,6 +147,8 @@ const experience = [
 ]
 
 export function Experience() {
+
+
     return (
         <div className={styles.experience} id="experience">
             <div className={styles.parallax_box}>

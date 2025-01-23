@@ -1,5 +1,6 @@
 import styles from "./TrackElementPosition.module.scss"
 import cn from "clsx"
+import { JSX } from "react";
 
 interface ITrackWordPositionItem {
     title: string
@@ -15,6 +16,8 @@ interface ITrackWordPositionItem {
 }
 
 export function TrackWordPositionItem({ title, items, side }: ITrackWordPositionItem) {
+
+
     return (
         <section className={styles.container}>
             <div className={styles.item}>
@@ -42,7 +45,7 @@ export function TrackWordPositionItem({ title, items, side }: ITrackWordPosition
                                         <h4 className={styles.info}>
                                             {item.title}
                                         </h4>
-                                        
+
                                         <p className={styles.description}>
                                             {item.description}
                                         </p>

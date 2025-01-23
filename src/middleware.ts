@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server'
+import { languages, defaultLanguage } from './config/languages'
 
-export function middleware(req: NextResponse) {
+export function middleware(req: NextRequest) {
     const userAgent = req.headers.get('user-agent') || '';
 
     // Простейшая проверка на мобильное устройство
@@ -9,9 +11,25 @@ export function middleware(req: NextResponse) {
     if (isMobile) {
         return NextResponse.redirect(new URL('/not-allowed', req.url));
     }
+
+    // Get the pathname of the request (e.g. /, /about, /blog/first-post)
+    const pathname = req.nextUrl.pathname
+
+    // Check if the pathname starts with our supported languages
+    const pathnameIsMissingLocale = Object.keys(languages).every(
+        (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    )
+
+    if (pathnameIsMissingLocale) {
+        // Redirect if there is no locale
+        const locale = defaultLanguage
+        return NextResponse.redirect(
+            new URL(`/${locale}${pathname}`, req.url)
+        )
+    }
 }
 
 // Настройка путей, на которых работает middleware
 export const config = {
-    matcher: ['/'], 
+    matcher: ['/((?!_next|api|favicon.ico).*)'],
 };

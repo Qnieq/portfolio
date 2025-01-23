@@ -1,5 +1,5 @@
 import AnimateBigWords from "@/components/ui/animate-big-words/AnimateBigWords";
-import styles from "@/app/main.module.scss"
+import styles from "@/app/[lang]/main.module.scss"
 import Image from "next/image";
 import { useState } from "react";
 import cn from "clsx"

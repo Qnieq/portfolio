@@ -1,5 +1,5 @@
 import Lenis from "lenis";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 
 interface ISmoothScrolling {
     children: JSX.Element
