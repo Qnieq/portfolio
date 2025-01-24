@@ -7,7 +7,7 @@ export const posters = [
         start_rotate: -120,
         width: 300,
         height: 350,
-        src: "/posters/young-dev.svg"
+        src: "/images/posters/young-dev.svg"
     },
     {
         delay: 3.3,
@@ -17,7 +17,7 @@ export const posters = [
         start_rotate: 120,
         width: 300,
         height: 350,
-        src: "/posters/user-exp.svg"
+        src: "/images/posters/user-exp.svg"
     },
     {
         delay: 3.3,
@@ -27,7 +27,7 @@ export const posters = [
         start_rotate: 130,
         width: 300,
         height: 350,
-        src: "/posters/modern-tech.svg"
+        src: "/images/posters/modern-tech.svg"
     },
     {
         delay: 3.4,
@@ -37,7 +37,7 @@ export const posters = [
         start_rotate: -100,
         width: 300,
         height: 350,
-        src: "/posters/anim.svg"
+        src: "/images/posters/anim.svg"
     },
     {
         delay: 3.5,
@@ -47,7 +47,7 @@ export const posters = [
         start_rotate: 160,
         width: 300,
         height: 350,
-        src: "/posters/comm-exp.svg"
+        src: "/images/posters/comm-exp.svg"
     },
     {
         delay: 3.2,
@@ -57,6 +57,6 @@ export const posters = [
         start_rotate: 140,
         width: 300,
         height: 350,
-        src: "/posters/cllear-code.svg"
+        src: "/images/posters/cllear-code.svg"
     },
 ]
