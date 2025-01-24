@@ -1,9 +1,8 @@
 import { useDictionaryStore } from "@/store/useDictionaryStore";
 import styles from "./NotAllowed.module.scss";
+import { Dictionary } from "@/types/lang.types";
 
-export default function NotAllowed() {
-
-    const dictionary = useDictionaryStore((state) => state.dictionary);
+export default function NotAllowed({ dictionary }: { dictionary: Dictionary }) {
 
     return (
         <div className={styles.not_allowed_box}>

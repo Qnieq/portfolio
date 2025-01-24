@@ -1,5 +1,5 @@
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './Paragraph.module.scss';
 import { Press_Start_2P } from "next/font/google";
 import cn from "clsx"
@@ -20,6 +20,8 @@ interface IWord {
 
 export default function Paragraph({ paragraph }: IParagraph) {
 
+    const [words, setWords] = useState<string[]>([])
+
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -28,7 +30,12 @@ export default function Paragraph({ paragraph }: IParagraph) {
 
     const dictionary = useDictionaryStore((state) => state.dictionary);
 
-    const words = dictionary[paragraph].split(" ")
+    useEffect(() => {
+        if (dictionary[paragraph]) {
+            setWords(dictionary[paragraph].split(" "))
+        }
+    }, [dictionary, paragraph])
+
     return (
         <p
             ref={container}

@@ -5,13 +5,6 @@ import { languages, defaultLanguage } from './config/languages'
 export function middleware(req: NextRequest) {
     const userAgent = req.headers.get('user-agent') || '';
 
-    // Простейшая проверка на мобильное устройство
-    const isMobile = /Mobile|Android|iPhone|iPad/i.test(userAgent);
-
-    if (isMobile) {
-        return NextResponse.redirect(new URL('/not-allowed', req.url));
-    }
-
     // Get the pathname of the request (e.g. /, /about, /blog/first-post)
     const pathname = req.nextUrl.pathname
 
@@ -20,12 +13,18 @@ export function middleware(req: NextRequest) {
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
 
+    // Простейшая проверка на мобильное устройство
+    const isMobile = /Mobile|Android|iPhone|iPad/i.test(userAgent);
+
     if (pathnameIsMissingLocale) {
         // Redirect if there is no locale
         const locale = defaultLanguage
         return NextResponse.redirect(
             new URL(`/${locale}${pathname}`, req.url)
         )
+    } else if (isMobile && pathnameIsMissingLocale) {
+        const locale = defaultLanguage
+        return NextResponse.redirect(new URL(`/${locale}/not-allowed`, req.url));
     }
 }
 

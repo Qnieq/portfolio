@@ -28,7 +28,7 @@ const textStyles: TextStyle = {
 export function ReadMore({ title, text, text_color, title_color }: IReadMore) {
 
     const dictionary = useDictionaryStore((state) => state.dictionary);
-    
+
     const [isOpen, setIsOpen] = useState(false);
     const [showReadMore, setShowReadMore] = useState(false);
 
@@ -47,7 +47,7 @@ export function ReadMore({ title, text, text_color, title_color }: IReadMore) {
 
             setMeasuredHeight(isOpen ? fullHeight : clampHeight);
         }
-    }, [textRef, isOpen]);
+    }, [textRef, isOpen, dictionary]);
 
     return (
         <motion.div
