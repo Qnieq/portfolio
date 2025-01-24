@@ -30,5 +30,5 @@ export function middleware(req: NextRequest) {
 
 // Настройка путей, на которых работает middleware
 export const config = {
-    matcher: ['/((?!_next|api|favicon.ico).*)'],
+    matcher: ['/((?!_next|api|favicon.ico|logos|icons|images).*)'],
 };
