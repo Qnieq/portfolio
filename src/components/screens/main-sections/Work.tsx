@@ -13,10 +13,10 @@ const Work = () => {
 
     return (
         <section className={styles.work}>
-            <div className={styles.title} id="works">
+            <div className={styles.title} >
                 <AnimateBigWords value={["WORK ", "WORK ", "WORK ", "WORK ", "WORK ", "WORK ", "WORK ",]} />
             </div>
-            <div className={styles.works_container}>
+            <div className={styles.works_container} id="works">
                 {works.map((work, index) => (
                     <motion.div
                         key={index}

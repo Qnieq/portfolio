@@ -6,6 +6,12 @@ export const works = [
         title: "mervice",
     },
     {
+        project_name: "Pet Project",
+        preview: "/images/works_preview/tasty-chips.png",
+        url: "https://tasty-chips.vercel.app",
+        title: "Tasty Chips"
+    },
+    {
         project_name: "iPhone store",
         preview: "/images/works_preview/iphoner.png",
         url: "https://iphoner-shop.ru",
