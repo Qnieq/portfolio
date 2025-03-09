@@ -21,13 +21,13 @@ const Work = () => {
                     <motion.div
                         key={index}
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1}}
+                        whileInView={{ opacity: 1 }}
                         transition={{
                             ease: "easeOut",
                             duration: 0.5,
                             delay: 1 + index * 0.2
                         }}
-                        viewport={{once: true}}
+                        viewport={{ once: true }}
                         className={styles.work_box}
                         onMouseEnter={() => setActive(index)}
                         onMouseLeave={() => setActive(undefined)}
@@ -41,7 +41,7 @@ const Work = () => {
                             </h2>
                         </div>
 
-                        <Link href={work.url} className={styles.work_link} />
+                        <Link href={work.url} className={styles.work_link} target="_blank" rel="noopener noreferrer" />
 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.3159 17L16.3159 5.83201L4.99997 5.83204" stroke="#0A0A0A" />
@@ -57,7 +57,7 @@ const Work = () => {
                                     styles.work_preview_disable
                             )}
                         >
-                            <Link href={`/works/${work.title}`} className={styles.work_link} />
+                            <Link href={`/works/${work.title}`} className={styles.work_link} target="_blank" rel="noopener noreferrer" />
                             <Image
                                 loading="eager"
                                 alt=""

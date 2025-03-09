@@ -13,6 +13,7 @@ import Header from "@/components/ui/header/Header";
 import { TopButton } from "@/components/ui/top_button/TopButton";
 import { Dictionary } from "@/types/lang.types";
 import { useDictionaryStore } from "@/store/useDictionaryStore";
+import { SocialMedia } from "@/components/screens/main-sections/SocialMedia";
 
 export function Main({ dictionary }: { dictionary: Dictionary }) {
     useEffect(() => {
@@ -33,6 +34,7 @@ export function Main({ dictionary }: { dictionary: Dictionary }) {
                 <WorkHistory />
                 <Experience />
                 <Work />
+                <SocialMedia />
                 <TopButton />
             </div>
         </SmoothScrolling>

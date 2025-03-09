@@ -5,6 +5,7 @@ import styles from "./Header.module.scss"
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { LanguageSwapper } from "../language-swapper/LanguageSwapper";
 
 const navigation: { id: string, title: string }[] = [
     {
@@ -44,7 +45,7 @@ const Header = ({ delay }: { delay?: number }) => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
-    
+
             return () => {
                 window.removeEventListener("resize", () => setWidth((current) => (current * 0) + window.innerWidth))
             }
@@ -83,6 +84,7 @@ const Header = ({ delay }: { delay?: number }) => {
                     <Link href={"/"} className={styles.logo_link} />
                 </div>
                 <nav className={styles.navigation}>
+                    <LanguageSwapper />
                     {navigation.map((nav, index) => (
                         <h5 key={index} className={styles.nav_title} onClick={() => scrollToElement(nav.id)}>
                             {nav.title}
@@ -109,6 +111,7 @@ const Header = ({ delay }: { delay?: number }) => {
                                 bounce: 0.05,
                             }}
                         >
+                            <LanguageSwapper />
                             {navigation.map((nav, index) => (
                                 <motion.div
                                     key={index}

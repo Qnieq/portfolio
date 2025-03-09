@@ -30,6 +30,8 @@ export function ContactsBox({ items }: IContactsBox) {
                         style={{ borderColor: item.color }}
                         onMouseEnter={() => (setHint(item.hint), setHintIsShow(true))}
                         onMouseLeave={() => (setHint(""), setHintIsShow(false))}
+                        target="_blank" 
+                        rel="noopener noreferrer"
                     >
                         {item.icon}
                     </Link>

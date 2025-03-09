@@ -1,0 +1,14 @@
+.swapper {
+    display: flex;
+    border: 1px solid #e7dfda;
+    border-radius: 10px;
+
+    .link {
+        border-radius: 8px;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #e7dfda;
+    }
+}

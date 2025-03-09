@@ -4,7 +4,7 @@ import styles from "@/app/[lang]/main.module.scss"
 import { useEffect, useState } from "react";
 import { posters } from "./posters.data";
 import { ContactsBox } from "@/components/ui/contacts-box/ContactsBox";
-import { Mail, Send } from "lucide-react";
+import { Linkedin, Mail, Send } from "lucide-react";
 import { useDictionaryStore } from "@/store/useDictionaryStore";
 
 const description = [
@@ -32,6 +32,13 @@ const items = [
         link: "https://t.me/michael_zavali",
         type: "",
         color: "#39a5db"
+    },
+    {
+        hint: "LinkedIn",
+        icon: <Linkedin size={25} color="#0077b5" />,
+        link: "https://www.linkedin.com/in/michael-orlov-280b4b348/",
+        type: "",
+        color: "#0077b5"
     },
 ]
 const HeroSection = ({ delay }: { delay?: number }) => {

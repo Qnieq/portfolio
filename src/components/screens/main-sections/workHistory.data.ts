@@ -31,21 +31,6 @@ export const history = [
     },
     {
         text: [
-            "",
-            "home.workHistory.TaskSync.text2",
-            `home.workHistory.TaskSync.text3`,
-            "home.workHistory.TaskSync.text4"
-        ],
-        text_block_title: ["", "home.workHistory.TaskSync.text_block_title2", "home.workHistory.TaskSync.text_block_title3", "home.workHistory.TaskSync.text_block_title4"],
-        color_text: "#dc03e4",
-        title: "Task Sync",
-        date: "home.workHistory.TaskSync.date",
-        role: "Fullstack developer",
-        color_title: "var(--branch)",
-        color_title_logo: "#dc03e4"
-    },
-    {
-        text: [
             "home.workHistory.themedik.text1",
             `home.workHistory.themedik.text2`,
             `home.workHistory.themedik.text3`,
