@@ -12,7 +12,7 @@
     "home.workHistory.IPhoner.text_block_title1": "About the Project",
     "home.workHistory.IPhoner.text_block_title3": "What Was Implemented?",
     "home.workHistory.IPhoner.text_block_title4": "Challenges",
-    "home.workHistory.IPhoner.date": "August 2022 - October 2022",
+    "home.workHistory.IPhoner.date": "October 2022 - December 2022",
 
     "home.workHistory.mervice.text1": "The company is engaged in wholesale trading of batch materials, and the task was to develop a company website and a platform for employee training.",
     "home.workHistory.mervice.text2": "Website for mervice.\n\nI fully developed the frontend using React. The main challenges I faced were implementing scroll animations by slides across devices and adding news, particularly uploading photos. I fixed the scrolling issue by adding a delay and ignoring redundant scroll events, and resolved the photo upload issue using formdata.\n\nBackend was new to me, and understanding how to handle requests and responses was the hardest part. I got acquainted with Express.js and implemented endpoints for the admin panel, which also involved file handling challenges.",
@@ -22,7 +22,7 @@
     "home.workHistory.mervice.text_block_title2": "Project №1",
     "home.workHistory.mervice.text_block_title3": "What's New?",
     "home.workHistory.mervice.text_block_title4": "Project №2",
-    "home.workHistory.mervice.date": "November 2022 - January 2024",
+    "home.workHistory.mervice.date": "December 2022 - March 2024",
 
     "home.workHistory.themedik.text1": "A startup project aimed at creating a service to promote personal branding for doctors.",
     "home.workHistory.themedik.text2": "Mainly worked on the backend and with an nginx server.\nOn the frontend, assisted with JWT authorization and setting up doctor profile settings and DND system.",
@@ -32,7 +32,7 @@
     "home.workHistory.themedik.text_block_title2": "Role",
     "home.workHistory.themedik.text_block_title3": "Tasks",
     "home.workHistory.themedik.text_block_title4": "Additional Responsibilities",
-    "home.workHistory.themedik.date": "July 2024 - November 2024",
+    "home.workHistory.themedik.date": "March 2024 - March 2025",
 
     "home.experience.Frontend.frameworks.react.desc": "2 years of development experience, working with hooks, context, routing, and other React features.",
     "home.experience.Frontend.frameworks.next.desc": "I've been using it for 1.5 years, primarily working with ISR. I'm not a big fan of SSR. :)",
